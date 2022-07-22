@@ -1,6 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
+import Pescante from 'assets/fonts/Pescante.woff2';
+import Paysage from 'assets/fonts/Paysage-Regular.woff2';
 
 const GlobalStyles = createGlobalStyle`
+   @font-face {
+      font-family: Pescante;
+      src: url(${Pescante});
+   }
+
+   @font-face {
+      font-family: Paysage;
+      src: url(${Paysage});
+   }
+
   *,
   *::after,
   *::before  {

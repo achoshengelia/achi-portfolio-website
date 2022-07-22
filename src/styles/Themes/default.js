@@ -1,6 +1,6 @@
 const defaultTheme = {
   fonts: {
-    main: 'Libre Franklin, sans-serif'
+    main: 'Paysage, sans-serif'
   },
   colors: {
     primary: {
