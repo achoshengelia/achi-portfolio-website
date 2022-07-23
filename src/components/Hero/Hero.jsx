@@ -1,6 +1,8 @@
 import React from 'react';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
+  BallWrapper,
+  BouncingBall,
   ContainerStyled,
   HeadingWrapperStyled,
   ParagraphStyled,
@@ -14,6 +16,9 @@ const Hero = () => {
       <CenterWrapperStyled>
         <Heading />
         <ParagraphStyled>Frontend Developer</ParagraphStyled>
+        <BallWrapper>
+          <BouncingBall />
+        </BallWrapper>
       </CenterWrapperStyled>
     </ContainerStyled>
   );
@@ -25,6 +30,7 @@ const Heading = () => {
   return (
     <HeadingWrapperStyled>
       <ShineStyled />
+
       <Svg viewBox="0 0 696 72" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M16.84 2.79998H35.464L49.384 70H34.792L32.776 54.256V42.544L29.032 44.08H22.888L19.144 42.544V54.256L17.128 70H2.92001L16.84 2.79998ZM24.232 31.6H27.688L31.336 33.04L28.072 14.32H23.848L20.584 33.04L24.232 31.6Z"

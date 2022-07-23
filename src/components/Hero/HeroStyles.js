@@ -1,6 +1,42 @@
 import styled from 'styled-components';
-import { ShineSlide, SlideUp, StrokeAnimate } from 'styles/animations';
+import {
+  Bounce,
+  FadeIn,
+  ShineSlide,
+  SlideUp,
+  StrokeAnimate
+} from 'styles/animations';
 import { CenterWrapperStyled } from 'styles/utils';
+import { customMediaQuery } from 'utils';
+
+export const BouncingBall = styled.div`
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: ${props => props.theme.colors.text.main};
+  animation: ${Bounce} 1s;
+  transform: translateY(0px);
+  animation-iteration-count: infinite;
+`;
+
+export const BallWrapper = styled.div`
+  position: relative;
+  border: 1px solid ${props => props.theme.colors.text.main};
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-top: auto;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: ${FadeIn} 0.2s ease forwards 4.5s;
+
+  & ${BouncingBall} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+  }
+`;
 
 export const ShineStyled = styled.div`
   position: absolute;
@@ -49,14 +85,26 @@ export const Svg = styled.svg`
 export const HeadingWrapperStyled = styled.div`
   position: relative;
   overflow: hidden;
+  margin-top: auto;
 `;
 
 export const ParagraphStyled = styled.p`
   margin-top: 5rem;
   font-size: 8rem;
   opacity: 0;
-  animation: ${SlideUp} 1s ease forwards;
-  animation-delay: 3s;
+  animation: ${SlideUp} 1s ease forwards 3s;
+
+  ${customMediaQuery(880)} {
+    font-size: 6.5rem;
+  }
+
+  ${customMediaQuery(740)} {
+    font-size: 6rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 5rem;
+  }
 `;
 
 export const ContainerStyled = styled.section`
