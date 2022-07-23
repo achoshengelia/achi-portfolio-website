@@ -56,7 +56,7 @@ export const ShineStyled = styled.div`
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
     transform: skewX(-30deg);
-    animation: ${ShineSlide} 1s ease forwards 3.1s;
+    animation: ${ShineSlide} 1s ease forwards 4.25s;
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.5) 0%,

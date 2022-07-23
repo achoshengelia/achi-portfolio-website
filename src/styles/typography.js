@@ -3,7 +3,7 @@ import { customMediaQuery } from 'utils';
 
 export const MainHeadingStyled = styled.h1`
   font-size: 15rem;
-  opacity: 0.3;
+  color: ${props => props.theme.colors.text.light};
 
   @media ${({ theme }) => theme.breakpoints.lg} {
     font-size: 13rem;
