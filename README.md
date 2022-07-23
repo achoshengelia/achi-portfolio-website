@@ -9,3 +9,7 @@ cd achi-portfolio-website
 yarn
 yarn start
 ```
+
+## Credits
+
+Font "Pescante" by Ariel Martín Pérez. Download from Tunera http://www.tunera.xyz/
