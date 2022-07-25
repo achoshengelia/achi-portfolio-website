@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
 
-export const ParagraphStyled = styled.p`
+export const ParagraphStyled = styled(motion.p)`
   font-size: 4rem;
   max-width: 100rem;
 
@@ -24,7 +23,7 @@ export const ParagraphStyled = styled.p`
   }
 `;
 
-export const ParagraphWrapperStyled = styled(motion.div)`
+export const ParagraphWrapperStyled = styled.div`
   & > * + * {
     margin-top: 5rem;
   }
@@ -44,11 +43,4 @@ export const ContainerStyled = styled.section`
   height: 100vh;
   width: 100%;
   color: ${props => props.theme.colors.text.light};
-
-  & ${CenterWrapperStyled} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 `;

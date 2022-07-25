@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTransform, useViewportScroll } from 'framer-motion';
+import { useTransform, useScroll } from 'framer-motion';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   BallWrapper,
@@ -13,16 +13,17 @@ import {
 } from './HeroStyles';
 
 const Hero = () => {
-  const { scrollYProgress } = useViewportScroll();
-
+  const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
+  const opacity = useTransform(scrollYProgress, [0, 100], [1, 0]);
 
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
         <HeaderStyled
           style={{
-            scale
+            scale,
+            opacity
           }}
         >
           <AnimatedHeading />
