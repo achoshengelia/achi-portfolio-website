@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import {
   Bounce,
   FadeIn,
@@ -6,7 +7,6 @@ import {
   SlideUp,
   StrokeAnimate
 } from 'styles/animations';
-import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
 
 export const BouncingBall = styled.div`
@@ -85,7 +85,6 @@ export const Svg = styled.svg`
 export const HeadingWrapperStyled = styled.div`
   position: relative;
   overflow: hidden;
-  margin-top: auto;
 `;
 
 export const ParagraphStyled = styled.p`
@@ -107,13 +106,14 @@ export const ParagraphStyled = styled.p`
   }
 `;
 
+export const HeaderStyled = styled(motion.header)`
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 export const ContainerStyled = styled.section`
   height: 100vh;
-
-  & ${CenterWrapperStyled} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 `;

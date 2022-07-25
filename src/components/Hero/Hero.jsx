@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTransform, useViewportScroll } from 'framer-motion';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   BallWrapper,
   BouncingBall,
   ContainerStyled,
+  HeaderStyled,
   HeadingWrapperStyled,
   ParagraphStyled,
   ShineStyled,
@@ -11,11 +13,21 @@ import {
 } from './HeroStyles';
 
 const Hero = () => {
+  const { scrollYProgress } = useViewportScroll();
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
+
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
-        <Heading />
-        <ParagraphStyled>Frontend Developer</ParagraphStyled>
+        <HeaderStyled
+          style={{
+            scale
+          }}
+        >
+          <AnimatedHeading />
+          <ParagraphStyled>Frontend Developer</ParagraphStyled>
+        </HeaderStyled>
         <BallWrapper>
           <BouncingBall />
         </BallWrapper>
@@ -26,7 +38,7 @@ const Hero = () => {
 
 export default Hero;
 
-const Heading = () => {
+const AnimatedHeading = () => {
   return (
     <HeadingWrapperStyled>
       <ShineStyled />
