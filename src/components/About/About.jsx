@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
-import { useScroll, useTransform } from 'framer-motion';
+import { useScroll } from 'framer-motion';
+import Lottie from 'lottie-react';
+import eye from 'assets/eye.json';
+import sphere from 'assets/sphere.json';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   BackgroundStyled,
@@ -14,22 +17,24 @@ const About = () => {
     target: ref,
     offset: ['start end', 'end end']
   });
-  const translateXNegative = useTransform(scrollYProgress, [0, 1], [-1000, 1]);
-  const translateX = useTransform(scrollYProgress, [0, 1], [1000, 1]);
 
   return (
     <ContainerStyled ref={ref}>
       <CenterWrapperStyled>
         <BackgroundStyled style={{ opacity: scrollYProgress }} />
 
-        <ParagraphWrapperStyled>
-          <ParagraphStyled style={{ translateX }}>
-            I enjoy building interactive websites that work smoothly across all
-            devices.
+        <ParagraphWrapperStyled
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <ParagraphStyled>
+            I enjoy building interactive websites <Lottie animationData={eye} />{' '}
+            that work smoothly across all devices.
           </ParagraphStyled>
-          <ParagraphStyled style={{ translateX: translateXNegative }}>
+          <ParagraphStyled>
             Clean design and carefully chosen tech stack is key to creating
-            seamless experience for users.
+            seamless experience for users. <Lottie animationData={sphere} />
           </ParagraphStyled>
         </ParagraphWrapperStyled>
       </CenterWrapperStyled>

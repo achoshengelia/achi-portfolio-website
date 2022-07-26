@@ -14,7 +14,6 @@ import {
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const opacity = useTransform(scrollYProgress, [0, 100], [1, 0]);
 
   return (
@@ -22,7 +21,6 @@ const Hero = () => {
       <CenterWrapperStyled>
         <HeaderStyled
           style={{
-            scale,
             opacity
           }}
         >

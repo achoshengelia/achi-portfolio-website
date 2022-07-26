@@ -69,7 +69,7 @@ export const ShineStyled = styled.div`
 
 export const Svg = styled.svg`
   width: 100vw;
-  max-width: 95rem;
+  max-width: 120rem;
   padding: 0 2rem;
 
   & path {
@@ -79,6 +79,7 @@ export const Svg = styled.svg`
     animation: ${StrokeAnimate} 3s cubic-bezier(0.22, 0, 0.67, 0) forwards;
     padding: 2rem;
     opacity: 0;
+    stroke: ${props => props.theme.colors.text.main};
   }
 `;
 
