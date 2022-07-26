@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { useScroll } from 'framer-motion';
 import Lottie from 'lottie-react';
-import eye from 'assets/eye.json';
-import sphere from 'assets/sphere.json';
+import eye from 'assets/lotties/eye.json';
+import sphere from 'assets/lotties/sphere.json';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   BackgroundStyled,
@@ -10,6 +10,7 @@ import {
   ParagraphStyled,
   ParagraphWrapperStyled
 } from './AboutStyles';
+import { TextGradientStyled } from 'styles/typography';
 
 const About = () => {
   const ref = useRef(null);
@@ -29,12 +30,16 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <ParagraphStyled>
-            I enjoy building interactive websites <Lottie animationData={eye} />{' '}
-            that work smoothly across all devices.
+            I enjoy building
+            <TextGradientStyled> interactive</TextGradientStyled> websites{' '}
+            <Lottie animationData={eye} /> that work smoothly across{' '}
+            <TextGradientStyled>all devices</TextGradientStyled>.
           </ParagraphStyled>
           <ParagraphStyled>
-            Clean design and carefully chosen tech stack is key to creating
-            seamless experience for users. <Lottie animationData={sphere} />
+            <TextGradientStyled>Clean design</TextGradientStyled> and carefully
+            chosen tech stack is key to creating
+            <TextGradientStyled> seamless experience </TextGradientStyled>
+            for users. <Lottie animationData={sphere} />
           </ParagraphStyled>
         </ParagraphWrapperStyled>
       </CenterWrapperStyled>
