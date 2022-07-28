@@ -43,7 +43,7 @@ export const ShineSlide = keyframes`
       opacity: 1;
     }
     100% {
-      left: 90rem;
+      left: 130rem;
     }
 `;
 
