@@ -5,7 +5,7 @@ export const CenterWrapperStyled = styled.div`
   width: 100%;
   padding: ${({ noPadding }) => (noPadding ? '0' : '0 2.5rem')};
   margin: 0 auto;
-  max-width: 145rem;
+  max-width: 130rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

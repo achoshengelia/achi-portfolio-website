@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Annika Terwey",
+    "technologies": [
+      "react",
+      "styled-components",
+      "framer motion",
+      "formik",
+      "react router",
+      "swiper"
+    ],
+    "image": "../assets/images/projects/annika/cover.jpg"
+  },
+  {
+    "title": "Zueinander Finden",
+    "technologies": [
+      "next",
+      "nest",
+      "styled-components",
+      "three.js",
+      "i18Next",
+      "postgreSQL",
+      "mapbox",
+      "axios"
+    ],
+    "image": "../assets/images/projects/annika/cover.jpg"
+  },
+  {
+    "title": "Ernst Gassebner",
+    "technologies": [
+      "gatsby",
+      "styled-components",
+      "i18Next",
+      "formik",
+      "swiper"
+    ],
+    "image": "../assets/images/projects/annika/cover.jpg"
+  },
+  {
+    "title": "Synth Gear",
+    "technologies": [
+      "express",
+      "ejs",
+      "mongo",
+      "mongoose",
+      "cloudinary",
+      "passport",
+      "bootstrap"
+    ],
+    "image": "../assets/images/projects/annika/cover.jpg"
+  }
+]
