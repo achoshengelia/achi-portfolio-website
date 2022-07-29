@@ -23,6 +23,18 @@ export const MainHeadingStyled = styled(motion.h1)`
   & > * + * {
     margin-left: 0.3em;
   }
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 7rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 5.5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.xs} {
+    font-size: 5rem;
+  }
 `;
 
 export const MainHeading = ({ children }) => {
