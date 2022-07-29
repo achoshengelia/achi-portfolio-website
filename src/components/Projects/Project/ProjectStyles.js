@@ -99,7 +99,7 @@ export const HeadingStyled = styled(motion.h2)`
   }
 `;
 
-export const ContainerStyled = styled.article`
+export const ContainerStyled = styled(motion.article)`
   height: 100%;
   width: 100%;
 

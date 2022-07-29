@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { isMobileDevice } from 'utils';
+import { isMobileDevice, slugify } from 'utils';
 import {
   ContainerStyled,
   FigureCaptionStyled,
@@ -12,13 +12,18 @@ import {
   TechnologyStyled,
   WordWrapperStyled
 } from './ProjectStyles';
+import { Link } from 'gatsby';
 
 const Project = ({ data }) => {
   const { title, image, technologies } = data;
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <ContainerStyled>
+    <ContainerStyled
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 0.6 } }}
+      viewport={{ once: true }}
+    >
       {!isMobileDevice() ? (
         <AnimatedHeading isVisible={isVisible}>{title}</AnimatedHeading>
       ) : null}
@@ -26,16 +31,18 @@ const Project = ({ data }) => {
       <FigureStyled>
         <FigureCaptionStyled>{title}</FigureCaptionStyled>
 
-        <ImageWrapperStyled
-          onHoverStart={() => setIsVisible(true)}
-          onHoverEnd={() => setIsVisible(false)}
-        >
-          <GatsbyImage
-            image={getImage(image)}
-            alt={title}
-            className="gatsby-image"
-          />
-        </ImageWrapperStyled>
+        <Link to={`projects/${slugify(title)}`}>
+          <ImageWrapperStyled
+            onHoverStart={() => setIsVisible(true)}
+            onHoverEnd={() => setIsVisible(false)}
+          >
+            <GatsbyImage
+              image={getImage(image)}
+              alt={title}
+              className="gatsby-image"
+            />
+          </ImageWrapperStyled>
+        </Link>
       </FigureStyled>
       <Technologies technologies={technologies} />
     </ContainerStyled>
@@ -87,8 +94,8 @@ const variantsParent = {
     y: '-50%',
     x: '-50%',
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.03
+      delayChildren: 0.1,
+      staggerChildren: 0.04
     }
   }
 };
