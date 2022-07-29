@@ -13,7 +13,7 @@ export const BackgroundStyled = styled(motion.div)`
   pointer-events: none;
 `;
 
-export const ParagraphStyled = styled(motion.p)`
+export const ParagraphStyled = styled(motion.div)`
   font-size: 6rem;
   max-width: 100rem;
 
@@ -21,20 +21,47 @@ export const ParagraphStyled = styled(motion.p)`
     stroke: ${props => props.theme.colors.text.accent};
   }
 
+  & > div {
+    max-width: 6rem;
+    max-height: 5rem;
+    display: inline-block;
+    transform: translateY(25%);
+  }
+
   @media ${props => props.theme.breakpoints.md} {
-    font-size: 3.5rem;
+    font-size: 5rem;
+
+    & > div {
+      max-width: 5rem;
+    }
   }
 
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 3rem;
+    font-size: 4rem;
+
+    & > div {
+      max-width: 4rem;
+    }
   }
 
-  ${customMediaQuery(400)} {
-    font-size: 2.7rem;
+  ${customMediaQuery(500)} {
+    font-size: 4.5rem;
   }
 
-  ${customMediaQuery(350)} {
-    font-size: 2.4rem;
+  ${customMediaQuery(380)} {
+    font-size: 4rem;
+
+    & > div {
+      max-width: 4rem;
+    }
+  }
+
+  ${customMediaQuery(340)} {
+    font-size: 3.5rem;
+
+    & > div {
+      max-width: 4rem;
+    }
   }
 `;
 
@@ -43,11 +70,12 @@ export const ParagraphWrapperStyled = styled(motion.div)`
     margin-top: 5rem;
   }
 
-  & div {
-    max-width: 6rem;
-    max-height: 5rem;
-    display: inline-block;
-    transform: translateY(25%);
+  ${customMediaQuery(500)} {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 

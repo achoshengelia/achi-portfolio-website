@@ -15,7 +15,7 @@ export default function HTML(props) {
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <main
+        <div
           key={`body`}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}

@@ -14,7 +14,6 @@ const defaultTheme = {
     text: {
       light: '#f5f3f4',
       main: '#0a0908',
-      // accent: '#48bfe3'
       accent: '#f72585'
     }
   },
