@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Technologies } from 'components';
 import { isMobileDevice, slugify } from 'utils';
 import {
   ContainerStyled,
@@ -8,11 +10,8 @@ import {
   HeadingStyled,
   ImageWrapperStyled,
   LetterWrapperStyled,
-  TechnologiesWrapperStyled,
-  TechnologyStyled,
   WordWrapperStyled
 } from './ProjectStyles';
-import { Link } from 'gatsby';
 
 const Project = ({ data }) => {
   const { title, image, technologies } = data;
@@ -71,18 +70,6 @@ const AnimatedHeading = ({ isVisible, children }) => {
         </WordWrapperStyled>
       ))}
     </HeadingStyled>
-  );
-};
-
-const Technologies = ({ technologies }) => {
-  return (
-    <TechnologiesWrapperStyled>
-      {technologies.map((technology, i) => (
-        <TechnologyStyled key={`${technology}-${i}`}>
-          {technology}
-        </TechnologyStyled>
-      ))}
-    </TechnologiesWrapperStyled>
   );
 };
 

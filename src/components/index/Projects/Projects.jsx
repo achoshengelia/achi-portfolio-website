@@ -6,22 +6,6 @@ import { chunk } from 'utils';
 import Project from './Project/Project';
 import { ContainerStyled, ProjectsContainerStyled } from './ProjectsStyles';
 
-const query = graphql`
-  query {
-    allProjectsJson {
-      nodes {
-        id
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-        technologies
-      }
-    }
-  }
-`;
 const Projects = () => {
   const { allProjectsJson } = useStaticQuery(query);
   const projects = allProjectsJson.nodes;
@@ -45,3 +29,20 @@ const Projects = () => {
 };
 
 export default Projects;
+
+const query = graphql`
+  query {
+    allProjectsJson {
+      nodes {
+        id
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+        technologies
+      }
+    }
+  }
+`;

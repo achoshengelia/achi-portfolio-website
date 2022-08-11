@@ -3,13 +3,11 @@ import { Hero, About, Projects } from 'components';
 
 const HomePage = () => {
   return (
-    <>
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-      </main>
-    </>
+    <main>
+      <Hero />
+      <About />
+      <Projects />
+    </main>
   );
 };
 

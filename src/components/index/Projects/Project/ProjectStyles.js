@@ -1,26 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const TechnologyStyled = styled.li`
-  color: ${props => props.theme.colors.text.light};
-  border: 1px solid ${props => props.theme.colors.text.light};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5em 1em;
-  border-radius: 1rem;
-  text-align: center;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-`;
-
-export const TechnologiesWrapperStyled = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 3rem;
-`;
-
 export const ImageWrapperStyled = styled(motion.div)`
   border-radius: 2rem;
   overflow: hidden;
@@ -33,6 +13,7 @@ export const ImageWrapperStyled = styled(motion.div)`
     max-height: 50rem;
     object-fit: cover;
     transition: transform 1.5s ease;
+    min-height: 52rem;
   }
 
   &:hover {
@@ -88,7 +69,7 @@ export const HeadingStyled = styled(motion.h2)`
   margin: 0;
   pointer-events: none;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  text-shadow: 5px 4px 9px rgba(247, 37, 133, 0.36);
+  text-shadow: 5px 4px 9px rgba(247, 37, 133, 0.1);
 
   & > * + * {
     margin-left: 0.3em;

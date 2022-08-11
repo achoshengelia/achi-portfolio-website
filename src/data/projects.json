@@ -9,7 +9,7 @@
       "react router",
       "swiper"
     ],
-    "image": "../assets/images/projects/annika/cover.jpg"
+    "image": "../assets/images/projects/annika/card.png"
   },
   {
     "title": "Zueinander Finden",
@@ -23,7 +23,19 @@
       "mapbox",
       "axios"
     ],
-    "image": "../assets/images/projects/annika/cover.jpg"
+    "image": "../assets/images/projects/zueinander/card.png",
+    "description": "Zueinander (Finden) Trovasi was a mental health awareness raising campaign in South Tyrol. I, in collaboration with my friend, built the UI of the website"
+  },
+  {
+    "title": "Dunkle Ecken",
+    "technologies": [
+      "react",
+      "styled-components",
+      "i18Next",
+      "react router",
+      "swiper"
+    ],
+    "image": "../assets/images/projects/dunkle/card.png"
   },
   {
     "title": "Ernst Gassebner",

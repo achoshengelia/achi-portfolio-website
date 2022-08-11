@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   *::selection{
-    background: ${props => props.theme.colors.primary.main};
+    background: ${props => props.theme.colors.text.accent};
     color: ${props => props.theme.colors.text.light};
   }
 
