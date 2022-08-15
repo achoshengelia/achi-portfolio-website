@@ -27,6 +27,10 @@ export const HeaderStyled = styled.header`
 `;
 
 export const ContainerStyled = styled.section`
+  border-radius: 0 0 2rem 2rem;
+  background-color: ${props => props.theme.colors.background.main};
+  padding-bottom: 5rem;
+
   & ${MainHeadingStyled} {
     color: ${props => props.theme.colors.text.main};
     font-family: Pescante, sans-serif;

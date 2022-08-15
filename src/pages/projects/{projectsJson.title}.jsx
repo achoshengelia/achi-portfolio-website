@@ -1,11 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Info } from 'components';
+import { Cover, Info } from 'components';
 
 const ProjectTemplate = props => {
   return (
-    <main>
+    <main style={{ backgroundColor: 'black', height: '200vh' }}>
       <Info />
+      <Cover />
     </main>
   );
 };
