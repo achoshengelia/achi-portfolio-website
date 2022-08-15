@@ -70,6 +70,7 @@ export const HeadingStyled = styled(motion.h2)`
   pointer-events: none;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   text-shadow: 5px 4px 9px rgba(247, 37, 133, 0.1);
+  overflow: hidden;
 
   & > * + * {
     margin-left: 0.3em;
