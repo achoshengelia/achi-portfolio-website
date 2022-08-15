@@ -13,7 +13,7 @@ export const FixedWrapperStyled = styled(motion.div)`
 `;
 
 export const ContainerStyled = styled.section`
-  height: 100vh;
+  height: 95vh;
   background-color: black;
   position: relative;
   overflow: hidden;

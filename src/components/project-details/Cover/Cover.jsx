@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
 import { ContainerStyled, FixedWrapperStyled } from './CoverStyles';
 
 const Cover = () => {
-  const { scrollYProgress } = useScroll();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start']
+  });
   const translateYValue = useTransform(
     scrollYProgress,
     [0, 100],
-    [-300, 250000]
+    [-400, 130000]
   );
   const translateY = useSpring(translateYValue, {
-    damping: 40,
-    mass: 0.3,
-    stiffness: 120
+    damping: 15,
+    mass: 0.2,
+    stiffness: 90
   });
 
   return (
-    <ContainerStyled>
+    <ContainerStyled ref={ref}>
       <FixedWrapperStyled
         style={{
           translateY
