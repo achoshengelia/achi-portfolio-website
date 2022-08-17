@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useScroll, useTransform, useSpring } from 'framer-motion';
+import { useTransform, useSpring, useScroll } from 'framer-motion';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   ContainerStyled,
@@ -36,12 +36,9 @@ const imgs = [
 
 const Media = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start']
-  });
+  const { scrollYProgress } = useScroll({ target: ref });
 
-  const translateYValue = useTransform(scrollYProgress, [0, 100], [-10, 5000]);
+  const translateYValue = useTransform(scrollYProgress, [0, 100], [-30, 4000]);
   const translateY = useSpring(translateYValue, {
     damping: 45,
     mass: 0.8,
@@ -49,9 +46,9 @@ const Media = () => {
   });
 
   return (
-    <MediaWrapperStyled>
+    <MediaWrapperStyled ref={ref}>
       {imgs.map(img => (
-        <ImageWrapperStyled ref={ref}>
+        <ImageWrapperStyled>
           <ImageStyled
             src={img}
             alt={img}
