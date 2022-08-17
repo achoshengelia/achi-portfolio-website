@@ -4,3 +4,4 @@ export * from './index/About';
 export * from './index/Projects';
 export * from './project-details/Info';
 export * from './project-details/Cover';
+export * from './project-details/ChallengeSolution';
