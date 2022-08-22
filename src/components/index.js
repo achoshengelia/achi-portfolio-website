@@ -5,3 +5,5 @@ export * from './index/Projects';
 export * from './project-details/Info';
 export * from './project-details/Cover';
 export * from './project-details/ChallengeSolution';
+export * from './project-details/Gallery';
+export * from './project-details/Video';

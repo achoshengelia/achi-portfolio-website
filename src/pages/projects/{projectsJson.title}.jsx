@@ -1,14 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { ChallengeSolution, Cover, Info } from 'components';
+import { ChallengeSolution, Cover, Gallery, Info, Video } from 'components';
 
 const ProjectTemplate = props => {
   return (
-    <main style={{ backgroundColor: 'black', height: '200vh' }}>
+    <main style={{ backgroundColor: 'black' }}>
       <Info />
       <Cover />
       <ChallengeSolution />
+      <Gallery />
       <ChallengeSolution isSolution />
+      <Video />
     </main>
   );
 };
