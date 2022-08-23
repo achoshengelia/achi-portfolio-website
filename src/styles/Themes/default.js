@@ -1,6 +1,7 @@
 const defaultTheme = {
   fonts: {
-    main: 'Paysage, sans-serif'
+    main: 'Paysage, sans-serif',
+    secondary: 'Pescante, sans-serif'
   },
   colors: {
     primary: {

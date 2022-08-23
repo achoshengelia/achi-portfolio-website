@@ -33,7 +33,7 @@ export const ContainerStyled = styled.section`
 
   & ${MainHeadingStyled} {
     color: ${props => props.theme.colors.text.main};
-    font-family: Pescante, sans-serif;
+    font-family: ${props => props.theme.fonts.secondary};
     text-transform: uppercase;
     margin: 0;
   }

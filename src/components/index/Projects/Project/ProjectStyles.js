@@ -62,7 +62,7 @@ export const HeadingStyled = styled(motion.h2)`
   left: 50%;
   color: ${props => props.theme.colors.text.accent};
   font-size: 7rem;
-  font-family: Pescante, sans-serif;
+  font-family: ${props => props.theme.fonts.secondary};
   text-transform: uppercase;
   z-index: 2;
   transition: opacity 0.5s ease;
