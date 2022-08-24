@@ -1,6 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { ChallengeSolution, Cover, Gallery, Info, Video } from 'components';
+import {
+  ChallengeSolution,
+  Cover,
+  Externals,
+  Gallery,
+  Info,
+  Video
+} from 'components';
 
 const ProjectTemplate = props => {
   return (
@@ -11,6 +18,7 @@ const ProjectTemplate = props => {
       <Gallery />
       <ChallengeSolution isSolution />
       <Video />
+      <Externals />
     </main>
   );
 };

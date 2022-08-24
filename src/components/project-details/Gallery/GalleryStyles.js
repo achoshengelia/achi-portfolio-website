@@ -38,7 +38,7 @@ export const GridWrapperStyled = styled.div`
   grid-template-columns: repeat(3, 1fr);
 `;
 
-export const ContainerStyled = styled.div`
+export const ContainerStyled = styled.section`
   background-color: ${props => props.theme.colors.background.main};
 
   & > ${CenterWrapperStyled} {
