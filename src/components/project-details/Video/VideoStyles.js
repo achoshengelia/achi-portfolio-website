@@ -2,17 +2,9 @@ import styled from 'styled-components';
 import play from 'assets/icons/play.svg';
 import pause from 'assets/icons/pause.svg';
 
-export const CircularTextStyled = styled.div`
-  position: relative;
-  width: 15rem;
-  height: 15rem;
-  overflow: hidden;
+export const CircularTextStyled = styled.span`
   animation: rotate 5s infinite linear;
-
-  & text {
-    font-size: 2rem;
-    fill: ${props => props.theme.colors.text.accent};
-  }
+  display: block;
 
   @keyframes rotate {
     from {
@@ -25,9 +17,6 @@ export const CircularTextStyled = styled.div`
 `;
 
 export const CursorWrapperStyled = styled.i`
-  height: 10rem;
-  width: 10rem;
-  border-radius: 100%;
   position: fixed;
   z-index: 99000;
   pointer-events: none;
@@ -45,7 +34,6 @@ export const VideoStyled = styled.video`
   max-height: 90vh;
   opacity: ${({ isPlaying }) => (isPlaying ? '1' : '.3')};
   transition: opacity 0.7s ease;
-
   cursor: ${({ isPlaying }) =>
     isPlaying ? `url(${pause}) 6 8, auto` : `url(${play}) 6 8, auto`};
 `;
