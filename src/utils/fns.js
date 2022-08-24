@@ -1,3 +1,5 @@
+import { isBrowser } from 'utils';
+
 export const customMediaQuery = pixels =>
   `@media only screen and (max-width: ${pixels / 16}em)`;
 
@@ -14,6 +16,7 @@ export const chunk = (array, size) => {
 
 export const isMobileDevice = () => {
   if (
+    isBrowser &&
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     )
