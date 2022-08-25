@@ -11,7 +11,7 @@ import {
 
 const ProjectTemplate = props => {
   return (
-    <main style={{ backgroundColor: 'black' }}>
+    <>
       <Info />
       <Cover />
       <ChallengeSolution />
@@ -19,7 +19,7 @@ const ProjectTemplate = props => {
       <ChallengeSolution isSolution />
       <Video />
       <Externals />
-    </main>
+    </>
   );
 };
 

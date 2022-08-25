@@ -1,4 +1,5 @@
 export * from './global/Technologies';
+export * from './global/Layout';
 export * from './index/Hero';
 export * from './index/About';
 export * from './index/Projects';
