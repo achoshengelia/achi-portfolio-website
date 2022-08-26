@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { CenterWrapperStyled } from 'styles/utils';
+import { customMediaQuery } from 'utils';
 
 export const ParagraphStyled = styled.span`
   display: inline-block;
@@ -38,5 +39,31 @@ export const ContainerStyled = styled.section`
 
   & ${ParagraphWrapperStyled} {
     grid-column: ${({ isSolution }) => (isSolution ? '2 / -1' : '1 / 2')};
+  }
+
+  @media ${props => props.theme.breakpoints.lg} {
+    & > ${CenterWrapperStyled} {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    & ${ParagraphWrapperStyled} {
+      font-size: 2.3rem;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    & ${ParagraphWrapperStyled} {
+      font-size: 2rem;
+    }
+  }
+
+  ${customMediaQuery(353)} {
+    & ${HeadingStyled} {
+      font-size: 3.3rem;
+      margin-left: 0.4rem;
+    }
   }
 `;

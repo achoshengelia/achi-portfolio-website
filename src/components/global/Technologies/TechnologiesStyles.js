@@ -7,6 +7,7 @@ export const ContainerStyled = styled.ul`
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 3rem;
+  font-size: 1.4rem;
 
   & ${ItemStyled} {
     color: ${({ theme, dark }) =>
@@ -20,7 +21,6 @@ export const ContainerStyled = styled.ul`
     padding: 0.5em 1em;
     border-radius: 1rem;
     text-align: center;
-    font-size: 1.4rem;
     text-transform: uppercase;
   }
 `;

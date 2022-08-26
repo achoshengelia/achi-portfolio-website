@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { CenterWrapperStyled } from 'styles/utils';
+import { customMediaQuery } from 'utils';
 
 export const SvgStyled = styled.svg`
   transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
@@ -9,6 +10,7 @@ export const SvgStyled = styled.svg`
   transform: ${({ animate }) =>
     animate ? 'translateX(200%)' : 'translateX(0)'};
   fill: ${props => props.theme.colors.text.light};
+  width: 5.5rem;
 
   &.animate {
     transform: translateX(200%);
@@ -66,6 +68,38 @@ export const ContainerStyled = styled.section`
 
     & > * + * {
       margin-top: 5rem;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.lg} {
+    padding: 5rem 0;
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    padding-top: 0;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    min-height: 0;
+    margin-bottom: 5rem;
+
+    & ${LinkStyled} {
+      font-size: 4rem;
+    }
+
+    & ${SvgStyled} {
+      width: 5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  ${customMediaQuery(352)} {
+    & ${LinkStyled} {
+      font-size: 3rem;
+    }
+    & ${SvgStyled} {
+      width: 4rem;
+      margin-top: 1.3rem;
     }
   }
 `;

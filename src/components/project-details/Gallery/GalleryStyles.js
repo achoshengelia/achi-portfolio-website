@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { CenterWrapperStyled } from 'styles/utils';
+import { customMediaQuery } from 'utils';
 
 export const ImageStyled = styled(motion.img)`
   height: 100%;
@@ -44,6 +45,51 @@ export const ContainerStyled = styled.section`
   & > ${CenterWrapperStyled} {
     & > * {
       margin-top: 10rem;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    & > ${CenterWrapperStyled} {
+      & > * {
+        margin-top: 7rem;
+      }
+    }
+
+    & ${GridWrapperStyled} {
+      gap: 2rem;
+      grid-template-areas: ${({ isSecond }) =>
+        isSecond ? '"a a a" "b c d"' : '"a a" "b b" "c d"'};
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & ${ImageStyled} {
+      max-height: 50rem;
+    }
+  }
+
+  ${customMediaQuery(520)} {
+    & > ${CenterWrapperStyled} {
+      & > * + * {
+        margin-top: 2rem;
+      }
+    }
+
+    & ${GridWrapperStyled} {
+      gap: 2rem;
+      grid-template-areas: 'a' 'b' 'c' 'd';
+      grid-template-columns: 1fr;
+    }
+  }
+
+  ${customMediaQuery(400)} {
+    & > ${CenterWrapperStyled} {
+      & > * {
+        margin-top: 4rem;
+      }
+    }
+
+    & ${GridWrapperStyled} {
+      gap: 1rem;
     }
   }
 `;
