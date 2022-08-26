@@ -14,7 +14,7 @@ const Info = () => {
     <ContainerStyled>
       <CenterWrapperStyled>
         <SubTitleStyled>Web Application</SubTitleStyled>
-        <MainHeading>Zueinander Finden</MainHeading>
+        <MainHeading slideUp>Zueinander Finden</MainHeading>
         <TimeStyled dateTime="2021">2021</TimeStyled>
         <Technologies
           technologies={[

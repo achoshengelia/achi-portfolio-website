@@ -37,12 +37,13 @@ export const MainHeadingStyled = styled(motion.h1)`
   }
 `;
 
-export const MainHeading = ({ children, ...props }) => {
+export const MainHeading = ({ slideUp, children, ...props }) => {
   return (
     <MainHeadingStyled
-      initial={{ opacity: 0, x: -80 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: slideUp ? 0 : -80, y: slideUp ? 60 : 0 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true }}
+      transition={{ duraiton: 1 }}
       {...props}
     >
       {children}
