@@ -41,6 +41,8 @@ export const GridWrapperStyled = styled.div`
 
 export const ContainerStyled = styled.section`
   background-color: ${props => props.theme.colors.background.main};
+  padding-bottom: 10rem;
+  border-radius: 0 0 2rem 2rem;
 
   & > ${CenterWrapperStyled} {
     & > * {

@@ -1,5 +1,7 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import { CenterWrapperStyled } from 'styles/utils';
+import { slugify } from 'utils';
 import {
   ContainerStyled,
   ArrowWrapperStyled,
@@ -7,19 +9,25 @@ import {
   SvgStyled
 } from './ExternalsStyles';
 
-const Externals = () => {
+const Externals = ({ externals }) => {
+  const { website, repository, nextProject } = externals;
+
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
-        <LinkStyled href="/">
-          View website
-          <Arrow />
-        </LinkStyled>
-        <LinkStyled href="/">
-          View repository
-          <Arrow />
-        </LinkStyled>
-        <LinkStyled href="/">
+        {website ? (
+          <LinkStyled href={website} target="_blank" rel="noreferrer">
+            View website
+            <Arrow />
+          </LinkStyled>
+        ) : null}
+        {repository ? (
+          <LinkStyled href={repository} target="_blank" rel="noreferrer">
+            View repository
+            <Arrow />
+          </LinkStyled>
+        ) : null}
+        <LinkStyled as={Link} to={`/projects/${slugify(nextProject)}`}>
           Next project <Arrow isInternalLink />
         </LinkStyled>
       </CenterWrapperStyled>

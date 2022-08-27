@@ -9,7 +9,28 @@
       "react router",
       "swiper"
     ],
-    "image": "../assets/images/projects/annika/card.png"
+    "image": "../assets/images/projects/annika/card.png",
+    "details": {
+      "info": {
+        "appType": "web application",
+        "date": "2022",
+        "description": [
+          "In this project, I helped the client to create a portfolio website that would perfectly represent her, as a professional and an artist.",
+          "Annika Terwey is a German-Italian, multi-disciplinary designer, artist and curator based in Berlin. Currently, she is writing her Master's thesis about interface design at FH;P."
+        ]
+      },
+      "cover": "",
+      "challenge": [
+        "The main hurdle was to create a website that would have a native application feeling, with various animations, effects and page transitions.",
+        "Because the client is an artist and a designer, the web design and functionality was different than usual. I was asked to create interactive components for the landing page, as well as a custom slider for images and videos. Lastly, the whole app needed to be responsive."
+      ],
+      "video": "",
+      "externals": {
+        "website": "https://www.annikaterwey.com",
+        "repository": "https://github.com/achoshengelia/annika-portfolio-website",
+        "nextProject": "Zueinander Finden"
+      }
+    }
   },
   {
     "title": "Zueinander Finden",
@@ -24,7 +45,27 @@
       "axios"
     ],
     "image": "../assets/images/projects/zueinander/card.png",
-    "description": "Zueinander (Finden) Trovasi was a mental health awareness raising campaign in South Tyrol. I, in collaboration with my friend, built the UI of the website"
+    "details": {
+      "info": {
+        "appType": "web application",
+        "date": "2021",
+        "description": [
+          "Zueinander (Finden) Trovasi was a mental health awareness raising campaign launched by Ariadne Association in South Tyrol. After a year of the Covid pandemic and multiple lockdowns, the need was great to create a symbol of encounter and community in public space.",
+          "The main goal of the project was to encourage people to be more open in dealing with their own mental well-being. Talking openly is crucial to counteract the stigma surrounding this subject."
+        ]
+      },
+      "cover": "",
+      "challenge": [
+        "The purpose of the website was to display the information about the past, current and upcoming events held in different South Tyrolian cities. For landing page, they wanted to put a 3D model of the bench, which was designed and built specially for this project.",
+        "Moreover, there needed to be an anonymus comment section so that people could share their personal experience and thoughts, as well as, a customised map which would display all the event locations. South Tyrol is bilingual region, which is why the UI needed to be in two languages."
+      ],
+      "video": "",
+      "externals": {
+        "website": null,
+        "repository": "https://github.com/achoshengelia/zueinander-finden",
+        "nextProject": "Dunkle Ecken"
+      }
+    }
   },
   {
     "title": "Dunkle Ecken",
@@ -35,7 +76,28 @@
       "react router",
       "swiper"
     ],
-    "image": "../assets/images/projects/dunkle/card.png"
+    "image": "../assets/images/projects/dunkle/card.png",
+    "details": {
+      "info": {
+        "appType": "web application",
+        "date": "2022",
+        "description": [
+          "Dunkle Ecken (Dark Corners) sheds some light on the topic of mental health, considering it from a variety of perspectives in order to dissolve traditional attitudes, and associated stigmas.",
+          "The exhibition aims to increase the visibility of the subject in order to promote a discourse on the integrity and transparency of mental health in our society. The archive frames the exhibited artworks and allows access to the submitted voice memos of people affected by mental health issues in German and Italian."
+        ]
+      },
+      "cover": "",
+      "challenge": [
+        "Since the website was created for an exhibition, it had a very interesting web design. I had to create a scrolling effect that would bend the content of the page. Also, because the exhibits were in three languages, the UI needed to be in three languages as well.",
+        "I was required to create a custom audio player for the audio exhibits, as well as a custom cursor for the overall website."
+      ],
+      "video": "",
+      "externals": {
+        "website": "https://www.dunkleecken.com",
+        "repository": "https://github.com/achoshengelia/dunkle-ecken",
+        "nextProject": "Ernst Gassebner"
+      }
+    }
   },
   {
     "title": "Ernst Gassebner",
@@ -46,19 +108,25 @@
       "formik",
       "swiper"
     ],
-    "image": "../assets/images/projects/annika/cover.jpg"
-  },
-  {
-    "title": "Synth Gear",
-    "technologies": [
-      "express",
-      "ejs",
-      "mongo",
-      "mongoose",
-      "cloudinary",
-      "passport",
-      "bootstrap"
-    ],
-    "image": "../assets/images/projects/annika/cover.jpg"
+    "image": "../assets/images/projects/annika/cover.jpg",
+    "details": {
+      "info": {
+        "appType": "web application",
+        "date": "2022",
+        "description": [
+          "Ernst Gassebner is an agronomist from South Tyrol, who needed a new website that would demonstrate his work, boost his business and simplify the communication between him and his clients."
+        ]
+      },
+      "cover": "",
+      "challenge": [
+        "I had to develop a simple portfolio website with a landing animation, slider and contact form. In addition, the website needed to be in two languages."
+      ],
+      "video": "",
+      "externals": {
+        "website": "https://ernstgassebner.netlify.app",
+        "repository": "https://github.com/achoshengelia/ernst-portfolio-website",
+        "nextProject": "Annika Terwey"
+      }
+    }
   }
 ]

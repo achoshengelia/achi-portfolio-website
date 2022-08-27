@@ -6,14 +6,23 @@ import { customMediaQuery } from 'utils';
 
 export const TextWrapperStyled = styled.p`
   font-size: 2rem;
+
+  & span {
+    display: block;
+  }
+
+  & > * + * {
+    margin-top: 2rem;
+  }
 `;
 
-export const SubTitleStyled = styled.span`
+export const AppTypeStyled = styled.span`
   opacity: 0.4;
   font-size: 2rem;
+  text-transform: capitalize;
 `;
 
-export const TimeStyled = styled.time`
+export const DateStyled = styled.time`
   justify-self: end;
   opacity: 0.4;
   font-size: 2rem;
@@ -28,7 +37,7 @@ export const ContainerStyled = styled.section`
     display: grid;
     gap: 5rem;
     grid-template-columns: 0.8fr 2fr 0.4fr;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
     padding-top: 5rem;
   }
@@ -57,11 +66,11 @@ export const ContainerStyled = styled.section`
       align-items: start;
     }
 
-    & ${SubTitleStyled} {
+    & ${AppTypeStyled} {
       grid-row: 2 /3;
     }
 
-    & ${TimeStyled} {
+    & ${DateStyled} {
       grid-row: 1/ 2;
       justify-self: start;
       margin-top: 1.7rem;
@@ -82,7 +91,7 @@ export const ContainerStyled = styled.section`
       font-size: 5.8rem;
     }
 
-    & ${TimeStyled} {
+    & ${DateStyled} {
       margin-top: 0;
     }
 
@@ -104,12 +113,12 @@ export const ContainerStyled = styled.section`
       font-size: 7rem;
     }
 
-    & ${SubTitleStyled} {
+    & ${AppTypeStyled} {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
     }
 
-    & ${TimeStyled} {
+    & ${DateStyled} {
       grid-column: 2 / -1;
       grid-row: 3 / 4;
       justify-self: end;
@@ -148,7 +157,7 @@ export const ContainerStyled = styled.section`
       font-size: 4.5rem;
     }
 
-    & ${TextWrapperStyled}, ${TimeStyled},${SubTitleStyled} {
+    & ${TextWrapperStyled}, ${DateStyled},${AppTypeStyled} {
       font-size: 2rem;
     }
 

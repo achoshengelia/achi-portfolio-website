@@ -4,44 +4,25 @@ import { MainHeading } from 'styles/typography';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   ContainerStyled,
-  SubTitleStyled,
+  AppTypeStyled,
   TextWrapperStyled,
-  TimeStyled
+  DateStyled
 } from './InfoStyles';
 
-const Info = () => {
+const Info = ({ title, technologies, info }) => {
+  const { date, appType, description } = info;
+
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
-        <SubTitleStyled>Web Application</SubTitleStyled>
-        <MainHeading slideUp>Zueinander Finden</MainHeading>
-        <TimeStyled dateTime="2021">2021</TimeStyled>
-        <Technologies
-          technologies={[
-            'next',
-            'nest',
-            'styled-components',
-            'three.js',
-            'i18Next',
-            'postgreSQL',
-            'mapbox',
-            'axios'
-          ]}
-          dark
-        />
+        <AppTypeStyled>{appType}</AppTypeStyled>
+        <MainHeading slideUp>{title}</MainHeading>
+        <DateStyled dateTime={date}>{date}</DateStyled>
+        <Technologies technologies={technologies} dark />
         <TextWrapperStyled>
-          Zueinander (Finden) Trovasi was a mental health awareness raising
-          campaign in South Tyrol. I, in collaboration with my friend, built the
-          UI of the website. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Sit consectetur omnis provident voluptatum odit voluptatibus in
-          qui pariatur doloribus modi ab, neque dolore tempora minima voluptate
-          optio.
-          <br />
-          <br /> Labore inventore numquam sed exercitationem, officiis maiores
-          repellendus deserunt. Vel natus quam expedita, ea dolorem, vero eius
-          eos voluptatum voluptas dolorum accusantium maxime tenetur. Dolore
-          illo deleniti fuga numquam similique voluptate velit deserunt, debitis
-          porro tenetur ad libero reprehenderit.
+          {description.map(paragraph => (
+            <span key={paragraph}>{paragraph}</span>
+          ))}
         </TextWrapperStyled>
       </CenterWrapperStyled>
     </ContainerStyled>
