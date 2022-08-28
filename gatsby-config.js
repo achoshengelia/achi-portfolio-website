@@ -9,7 +9,8 @@ module.exports = {
         resolveModules: [path.join(__dirname, `libs`)],
         components: path.join(__dirname, `src`, `components`),
         constants: path.join(__dirname, `src`, `constants`),
-        assets: path.join(__dirname, `src`, `assets`)
+        assets: path.join(__dirname, `src`, `assets`),
+        hooks: path.join(__dirname, `src`, `hooks`)
       }
     },
     {
@@ -30,7 +31,7 @@ module.exports = {
       options: {
         defaults: {
           placeholder: `dominantColor`,
-          quality: 95,
+          quality: 1,
           backgroundColor: `transparent`
         }
       }

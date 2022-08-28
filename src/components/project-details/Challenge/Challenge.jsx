@@ -26,7 +26,7 @@ const Text = ({ text }) => {
   return (
     <ParagraphWrapperStyled>
       {text.map(paragraph => (
-        <ParagraphStyled>{paragraph}</ParagraphStyled>
+        <ParagraphStyled key={paragraph}>{paragraph}</ParagraphStyled>
       ))}
     </ParagraphWrapperStyled>
   );

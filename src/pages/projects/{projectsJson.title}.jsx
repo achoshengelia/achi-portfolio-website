@@ -5,16 +5,17 @@ import { Challenge, Cover, Externals, Gallery, Info, Video } from 'components';
 const ProjectTemplate = props => {
   const { projectsJson } = props.data;
   const { details, technologies, title } = projectsJson;
-  const infoProps = { info: details.info, technologies, title };
+  const { info, cover, challenge, externals, gallery, video } = details;
+  const infoProps = { info, technologies, title };
 
   return (
     <>
       <Info {...infoProps} />
-      <Cover />
-      <Challenge text={details.challenge} />
-      <Gallery />
-      <Video />
-      <Externals externals={details.externals} />
+      <Cover cover={cover} />
+      <Challenge text={challenge} />
+      <Gallery gallery={gallery} />
+      <Video video={video} />
+      <Externals externals={externals} />
     </>
   );
 };
@@ -30,7 +31,27 @@ export const query = graphql`
           date
           description
         }
+        cover {
+          bgColor
+          src {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+            }
+          }
+        }
         challenge
+        gallery {
+          alt
+          src {
+            childImageSharp {
+              id
+              gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+            }
+          }
+        }
+        video {
+          publicURL
+        }
         externals {
           website
           repository

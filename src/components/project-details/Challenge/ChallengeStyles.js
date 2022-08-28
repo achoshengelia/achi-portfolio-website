@@ -22,23 +22,19 @@ export const HeadingStyled = styled.h2`
 `;
 
 export const ContainerStyled = styled.section`
-  border-radius: ${({ isSolution }) =>
-    isSolution ? '0 0 2rem 2rem' : '2rem 2rem 0 0'};
+  border-radius: 2rem 2rem 0 0;
   background-color: ${props => props.theme.colors.background.main};
-  padding: ${({ isSolution }) =>
-    isSolution ? '10rem 0 10rem 0' : '5rem 0 0 0'};
+  padding: 5rem 0 0 0;
+  position: relative;
+  z-index: 2;
 
   & > ${CenterWrapperStyled} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
 
-  & ${HeadingStyled} {
-    grid-column: ${({ isSolution }) => (isSolution ? '2 / -1' : null)};
-  }
-
-  & ${ParagraphWrapperStyled} {
-    grid-column: ${({ isSolution }) => (isSolution ? '2 / -1' : '1 / 2')};
+    & ${ParagraphWrapperStyled} {
+      grid-column: 1 / 2;
+    }
   }
 
   @media ${props => props.theme.breakpoints.lg} {

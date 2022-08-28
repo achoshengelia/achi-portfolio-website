@@ -32,6 +32,8 @@ export const ContainerStyled = styled.section`
   border-radius: 0 0 2rem 2rem;
   background-color: ${props => props.theme.colors.background.main};
   padding-bottom: 5rem;
+  position: relative;
+  z-index: 2;
 
   & ${CenterWrapperStyled} {
     display: grid;

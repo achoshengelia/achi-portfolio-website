@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import video from 'assets/test.mp4';
+import { isMobileDevice } from 'utils';
 import {
   ButtonStyled,
   CircularTextStyled,
@@ -9,9 +9,8 @@ import {
   VideoStyled,
   VideoWrapperStyled
 } from './VideoStyles';
-import { isMobileDevice } from 'utils';
 
-const Video = () => {
+const Video = ({ video }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const togglePlay = () => {
@@ -33,8 +32,9 @@ const Video = () => {
           ref={videoRef}
           onClick={togglePlay}
           isPlaying={isPlaying}
+          loop
         >
-          <source src={video} />
+          <source src={video.publicURL} />
         </VideoStyled>
         {isMobileDevice() ? (
           <PlayButton isPlaying={isPlaying} togglePlay={togglePlay} />

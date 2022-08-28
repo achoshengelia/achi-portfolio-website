@@ -19,12 +19,49 @@
           "Annika Terwey is a German-Italian, multi-disciplinary designer, artist and curator based in Berlin. Currently, she is writing her Master's thesis about interface design at FH;P."
         ]
       },
-      "cover": "",
+      "cover": {
+        "bgColor": "#212429",
+        "src": "../assets/images/projects/ernst/cover.jpg"
+      },
       "challenge": [
         "The main hurdle was to create a website that would have a native application feeling, with various animations, effects and page transitions.",
         "Because the client is an artist and a designer, the web design and functionality was different than usual. I was asked to create interactive components for the landing page, as well as a custom slider for images and videos. Lastly, the whole app needed to be responsive."
       ],
-      "video": "",
+      "gallery": [
+        {
+          "src": "../assets/images/projects/zueinander/gallery/1-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/2-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/3-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/4-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/1-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/2-2.gif",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/3-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/4-2.jpg",
+          "alt": "alt"
+        }
+      ],
+      "video": "../assets/images/projects/zueinander/video.mp4",
       "externals": {
         "website": "https://www.annikaterwey.com",
         "repository": "https://github.com/achoshengelia/annika-portfolio-website",
@@ -54,12 +91,49 @@
           "The main goal of the project was to encourage people to be more open in dealing with their own mental well-being. Talking openly is crucial to counteract the stigma surrounding this subject."
         ]
       },
-      "cover": "",
+      "cover": {
+        "bgColor": "#212429",
+        "src": "../assets/images/projects/zueinander/cover.jpg"
+      },
       "challenge": [
         "The purpose of the website was to display the information about the past, current and upcoming events held in different South Tyrolian cities. For landing page, they wanted to put a 3D model of the bench, which was designed and built specially for this project.",
         "Moreover, there needed to be an anonymus comment section so that people could share their personal experience and thoughts, as well as, a customised map which would display all the event locations. South Tyrol is bilingual region, which is why the UI needed to be in two languages."
       ],
-      "video": "",
+      "gallery": [
+        {
+          "src": "../assets/images/projects/zueinander/gallery/1-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/2-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/3-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/4-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/1-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/2-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/3-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/4-2.jpg",
+          "alt": "alt"
+        }
+      ],
+      "video": "../assets/images/projects/zueinander/video.mp4",
       "externals": {
         "website": null,
         "repository": "https://github.com/achoshengelia/zueinander-finden",
@@ -86,12 +160,49 @@
           "The exhibition aims to increase the visibility of the subject in order to promote a discourse on the integrity and transparency of mental health in our society. The archive frames the exhibited artworks and allows access to the submitted voice memos of people affected by mental health issues in German and Italian."
         ]
       },
-      "cover": "",
+      "cover": {
+        "bgColor": "#212429",
+        "src": "../assets/images/projects/zueinander/cover.jpg"
+      },
       "challenge": [
         "Since the website was created for an exhibition, it had a very interesting web design. I had to create a scrolling effect that would bend the content of the page. Also, because the exhibits were in three languages, the UI needed to be in three languages as well.",
         "I was required to create a custom audio player for the audio exhibits, as well as a custom cursor for the overall website."
       ],
-      "video": "",
+      "gallery": [
+        {
+          "src": "../assets/images/projects/zueinander/gallery/1-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/2-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/3-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/4-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/1-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/2-2.gif",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/3-2.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/zueinander/gallery/4-2.jpg",
+          "alt": "alt"
+        }
+      ],
+      "video": "../assets/images/projects/zueinander/video.mp4",
       "externals": {
         "website": "https://www.dunkleecken.com",
         "repository": "https://github.com/achoshengelia/dunkle-ecken",
@@ -117,11 +228,36 @@
           "Ernst Gassebner is an agronomist from South Tyrol, who needed a new website that would demonstrate his work, boost his business and simplify the communication between him and his clients."
         ]
       },
-      "cover": "",
+      "cover": {
+        "bgColor": "#8cbd9e",
+        "src": "../assets/images/projects/ernst/cover.jpg"
+      },
       "challenge": [
         "I had to develop a simple portfolio website with a landing animation, slider and contact form. In addition, the website needed to be in two languages."
       ],
-      "video": "",
+      "gallery": [
+        {
+          "src": "../assets/images/projects/ernst/gallery/1-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/ernst/gallery/2-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/ernst/gallery/3-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/ernst/gallery/4-1.jpg",
+          "alt": "alt"
+        },
+        {
+          "src": "../assets/images/projects/ernst/gallery/1-2.jpg",
+          "alt": "alt"
+        }
+      ],
+      "video": "../assets/images/projects/zueinander/video.mp4",
       "externals": {
         "website": "https://ernstgassebner.netlify.app",
         "repository": "https://github.com/achoshengelia/ernst-portfolio-website",
