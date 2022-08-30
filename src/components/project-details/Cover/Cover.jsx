@@ -6,15 +6,12 @@ import { ContainerStyled, FixedWrapperStyled } from './CoverStyles';
 const Cover = ({ cover }) => {
   const { bgColor, src } = cover;
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start']
-  });
-  const translateYValue = useTransform(scrollYProgress, [0, 20], [-600, 20000]);
+  const { scrollYProgress } = useScroll();
+  const translateYValue = useTransform(scrollYProgress, [0, 5], [-500, 25000]);
   const translateY = useSpring(translateYValue, {
-    damping: 15,
-    mass: 0.2,
-    stiffness: 90
+    damping: 25,
+    mass: 0.8,
+    stiffness: 50
   });
 
   return (

@@ -18,4 +18,5 @@ export const ContainerStyled = styled.section`
   margin: -5rem 0;
   z-index: 1;
   background-color: ${({ bgColor }) => bgColor};
+  height: 110vh;
 `;

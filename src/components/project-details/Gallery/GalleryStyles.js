@@ -8,7 +8,7 @@ export const MotionWrapperStyled = styled(motion.div)``;
 export const ImageWrapperStyled = styled.div`
   border-radius: 2rem;
   overflow: hidden;
-  max-height: 85rem;
+  max-height: 95rem;
   background: grey;
 
   & img {

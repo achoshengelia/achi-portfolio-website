@@ -52,7 +52,7 @@ export const StrokeAnimate = keyframes`
       opacity: 1;
     }
     100% {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 0%;
       opacity: 1;
     }
 `;

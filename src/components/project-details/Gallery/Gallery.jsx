@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { useViewportScroll, useTransform, useSpring } from 'framer-motion';
+import { useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRefScrollProgress } from 'hooks';
 import { CenterWrapperStyled } from 'styles/utils';
 import { chunk } from 'utils';
@@ -19,8 +19,8 @@ const Gallery = ({ gallery }) => {
       <CenterWrapperStyled>
         {chunks.map((chunk, i) => (
           <GridWrapperStyled key={i} isSecondLayout={i === 1}>
-            {chunk.map(({ id, src, alt }) => (
-              <Image key={id} data={{ src, alt }} />
+            {chunk.map(({ id, src, alt }, i) => (
+              <Image key={`${id}-${i}`} data={{ src, alt }} />
             ))}
           </GridWrapperStyled>
         ))}
@@ -35,7 +35,7 @@ const Image = ({ data }) => {
   const { src, alt } = data;
   const ref = useRef(null);
   const { start, end } = useRefScrollProgress(ref);
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
   const translateYValue = useTransform(
     scrollYProgress,
     [start, end],
