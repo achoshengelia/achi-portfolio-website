@@ -1,19 +1,11 @@
 import styled from 'styled-components';
 import play from 'assets/icons/play.svg';
 import pause from 'assets/icons/pause.svg';
+import { Rotate } from 'styles/animations';
 
 export const CircularTextStyled = styled.span`
-  animation: rotate 5s infinite linear;
+  animation: ${Rotate} 5s infinite linear;
   display: block;
-
-  @keyframes rotate {
-    from {
-      transform: rotate(360deg);
-    }
-    to {
-      transform: rotate(0);
-    }
-  }
 `;
 
 export const SvgWrapperStyled = styled.span``;

@@ -16,7 +16,7 @@ const AnimatedLink = ({ noArrow, text, ...props }) => {
 
 export default AnimatedLink;
 
-const Arrow = () => {
+export const Arrow = () => {
   return (
     <ArrowWrapperStyled>
       {[1, 2].map(i => (

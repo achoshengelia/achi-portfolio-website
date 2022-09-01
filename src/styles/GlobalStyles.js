@@ -67,9 +67,11 @@ const GlobalStyles = createGlobalStyle`
 
   input,
   textarea { 
+    font-family: ${props => props.theme.fonts.main};
+    
     &:focus{
       outline: none;
-    } 
+    }
   }
 
   img,
