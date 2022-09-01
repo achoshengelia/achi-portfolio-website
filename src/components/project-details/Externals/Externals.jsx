@@ -33,6 +33,7 @@ const Externals = ({ externals }) => {
           to={`/projects/${slugify(nextProject)}`}
           $arrowPosition="right"
         />
+        <AnimatedLink text="Back home" as={Link} to="/" $arrowPosition="left" />
       </CenterWrapperStyled>
     </ContainerStyled>
   );

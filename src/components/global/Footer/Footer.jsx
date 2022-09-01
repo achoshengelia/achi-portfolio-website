@@ -8,6 +8,11 @@ import {
   SocialsWrapperStyled
 } from './FooterStyles';
 
+const handleScrollTop = e => {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+};
+
 const Footer = () => {
   return (
     <ContainerStyled>
@@ -32,7 +37,12 @@ const Footer = () => {
             noArrow
           />
         </ExternalsWrapperStyled>
-        <AnimatedLink href="#" text="TOP" $arrowPosition="up" />
+        <AnimatedLink
+          href="#"
+          onClick={handleScrollTop}
+          text="TOP"
+          $arrowPosition="up"
+        />
       </CenterWrapperStyled>
       <LineBreakStyled />
     </ContainerStyled>

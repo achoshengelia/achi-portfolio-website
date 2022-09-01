@@ -40,7 +40,7 @@ export const ContainerStyled = styled.footer`
 
     & ${SvgStyled} {
       width: 3.5rem;
-      margin: 1.5rem 0 0 1rem;
+      margin-top: 1.4rem;
     }
   }
 

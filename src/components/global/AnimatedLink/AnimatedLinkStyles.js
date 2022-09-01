@@ -5,15 +5,23 @@ export const SvgStyled = styled.svg``;
 export const ArrowWrapperStyled = styled.span`
   display: inline-block;
   position: relative;
-  height: 4.2rem;
+  height: 4.8rem;
   width: 5rem;
   overflow: hidden;
+  margin-left: 1rem;
 `;
 
 export const LinkStyled = styled.a`
   font-size: 5rem;
   position: relative;
   width: fit-content;
+
+  & ${ArrowWrapperStyled} {
+    transform: ${({ $arrowPosition }) =>
+      $arrowPosition !== 'left' ? 'translateY(20%)' : null};
+    margin-left: ${({ $arrowPosition }) =>
+      $arrowPosition !== 'left' ? '1rem' : '2rem'};
+  }
 
   & ${SvgStyled} {
     transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
@@ -27,6 +35,8 @@ export const LinkStyled = styled.a`
         ? 'rotate(45deg)'
         : $arrowPosition === 'up'
         ? 'rotate(-45deg)'
+        : $arrowPosition === 'left'
+        ? 'rotate(-135deg)'
         : null};
 
     &.animate {
@@ -35,6 +45,8 @@ export const LinkStyled = styled.a`
           ? 'translateX(200%) rotate(45deg)'
           : $arrowPosition === 'up'
           ? 'translateY(200%) rotate(-45deg)'
+          : $arrowPosition === 'left'
+          ? 'translateX(200%) rotate(-135deg)'
           : 'translateX(200%)'};
       fill: ${props => props.theme.colors.text.accent};
     }
@@ -65,6 +77,8 @@ export const LinkStyled = styled.a`
           ? 'translateX(-200%) rotate(45deg)'
           : $arrowPosition === 'up'
           ? 'translateY(-200%) rotate(-45deg)'
+          : $arrowPosition === 'left'
+          ? 'translateX(-200%) rotate(-135deg)'
           : 'translateX(-200%)'};
 
       &.animate {
@@ -73,6 +87,8 @@ export const LinkStyled = styled.a`
             ? 'translateX(0) rotate(45deg)'
             : $arrowPosition === 'up'
             ? 'translateY(0) rotate(-45deg)'
+            : $arrowPosition === 'left'
+            ? 'translateX(0) rotate(-135deg)'
             : 'translateX(0)'};
       }
     }
