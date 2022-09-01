@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Field, Form } from 'formik';
 import { Shake } from 'styles/animations';
 import { ButtonStyled } from './Button/ButtonStyles';
+import { motion } from 'framer-motion';
 
 const AnimateField = css`
   animation: ${Shake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -30,7 +31,11 @@ export const FieldStyled = styled(Field)`
   }
 `;
 
-export const FieldsWrapperStyled = styled.div``;
+export const ButtonWrapperStyled = styled(motion.div)`
+  align-self: flex-end;
+`;
+
+export const FieldsWrapperStyled = styled(motion.div)``;
 
 export const FormStyled = styled(Form)`
   color: ${props => props.theme.colors.text.light};
