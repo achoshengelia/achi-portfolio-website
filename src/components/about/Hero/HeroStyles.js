@@ -29,4 +29,27 @@ export const ContainerStyled = styled.section`
       margin-top: 5rem;
     }
   }
+
+  @media ${props => props.theme.breakpoints.lg} {
+    font-size: 5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    ${ParagraphStyled} {
+      max-width: none;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 4rem;
+
+    ${ParagraphStyled} {
+      & > div {
+        max-width: 4rem;
+        max-height: 4rem;
+        display: inline-block;
+        transform: translateY(25%);
+      }
+    }
+  }
 `;
