@@ -4,9 +4,9 @@ import { customMediaQuery } from 'utils';
 import { CenterWrapperStyled } from 'styles/utils';
 
 export const BackgroundStyled = styled(motion.div)`
-  background-color: ${props => props.theme.colors.text.main};
   height: 100%;
   width: 100%;
+  background-color: ${props => props.theme.colors.text.main};
   position: fixed;
   top: 0;
   z-index: -25;

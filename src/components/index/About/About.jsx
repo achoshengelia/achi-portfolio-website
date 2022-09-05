@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useScroll } from 'framer-motion';
 import Lottie from 'lottie-react';
 import eye from 'assets/lotties/eye.json';
 import sphere from 'assets/lotties/sphere.json';
+import { TextGradientStyled } from 'styles/typography';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
   BackgroundStyled,
@@ -10,7 +12,6 @@ import {
   ParagraphStyled,
   ParagraphWrapperStyled
 } from './AboutStyles';
-import { TextGradientStyled } from 'styles/typography';
 
 const About = () => {
   const ref = useRef(null);
@@ -22,7 +23,10 @@ const About = () => {
   return (
     <ContainerStyled ref={ref}>
       <CenterWrapperStyled>
-        <BackgroundStyled style={{ opacity: scrollYProgress }} />
+        {createPortal(
+          <BackgroundStyled style={{ opacity: scrollYProgress }} />,
+          document.getElementById('menu')
+        )}
 
         <ParagraphWrapperStyled
           initial={{ opacity: 0, y: 200 }}

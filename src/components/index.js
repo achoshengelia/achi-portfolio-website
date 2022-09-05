@@ -8,6 +8,7 @@ export * from './index/Hero';
 export * from './index/About';
 export * from './index/Projects';
 export * from './index/Contact';
+export * from './about/Hero';
 export * from './project-details/Info';
 export * from './project-details/Cover';
 export * from './project-details/Challenge';
