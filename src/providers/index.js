@@ -1,1 +1,2 @@
-export { default as Theme } from './Theme';
+export * from './Theme';
+export * from './GlobalContext';

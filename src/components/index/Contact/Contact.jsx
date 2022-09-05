@@ -6,7 +6,7 @@ import { ContainerStyled } from './ContactStyles';
 
 const Contact = () => {
   return (
-    <ContainerStyled>
+    <ContainerStyled id="contact">
       <CenterWrapperStyled>
         <MainHeading>Send a message</MainHeading>
         <Form />

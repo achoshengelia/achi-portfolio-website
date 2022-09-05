@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { AnimatedLink } from 'components';
 import { CenterWrapperStyled } from 'styles/utils';
 import { slugify } from 'utils';
@@ -29,11 +28,10 @@ const Externals = ({ externals }) => {
         ) : null}
         <AnimatedLink
           text="Next project"
-          as={Link}
           to={`/projects/${slugify(nextProject)}`}
           $arrowPosition="right"
         />
-        <AnimatedLink text="Back home" as={Link} to="/" $arrowPosition="left" />
+        <AnimatedLink text="Back home" to="/" $arrowPosition="left" />
       </CenterWrapperStyled>
     </ContainerStyled>
   );

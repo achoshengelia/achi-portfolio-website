@@ -15,3 +15,7 @@ export const wrapPageElement = ({ element, props }) => {
 export const wrapRootElement = ({ element }) => {
   return <Theme>{element}</Theme>;
 };
+
+export const onRenderBody = ({ setPostBodyComponents }) => {
+  setPostBodyComponents([<div key="menu" id="menu" />]);
+};

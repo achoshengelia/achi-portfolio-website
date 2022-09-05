@@ -30,11 +30,12 @@ const GlobalStyles = createGlobalStyle`
   body,
   #gatsby-focus-wrapper {
     min-height: 100vh;
+    overflow: ${({ overflowHidden }) => (overflowHidden ? 'hidden' : null)};
   }
 
   html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
   }
 
   body {

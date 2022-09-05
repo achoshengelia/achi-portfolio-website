@@ -1,13 +1,29 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { isExternalLink } from 'utils';
 import {
   LinkStyled,
   ArrowWrapperStyled,
   SvgStyled
 } from './AnimatedLinkStyles';
 
-const AnimatedLink = ({ noArrow, text, ...props }) => {
+const handleScrollTop = e => {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+};
+
+const AnimatedLink = ({ noArrow, text, href, to, isScrollTop, ...props }) => {
+  const url = href || to;
+  const isExternal = isExternalLink(url);
+
   return (
-    <LinkStyled {...props}>
+    <LinkStyled
+      as={!isExternal ? Link : null}
+      href={isExternal ? url : null}
+      to={!isExternal ? url : null}
+      onClick={isScrollTop ? handleScrollTop : null}
+      {...props}
+    >
       {text}
       {!noArrow ? <Arrow /> : null}
     </LinkStyled>

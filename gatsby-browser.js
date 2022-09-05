@@ -1,5 +1,5 @@
 import React from 'react';
-import { Theme } from 'providers';
+import { GlobalContextProvider, Theme } from 'providers';
 import { Layout } from 'components';
 
 export const wrapPageElement = ({ element, props }) => {
@@ -13,5 +13,9 @@ export const wrapPageElement = ({ element, props }) => {
 };
 
 export const wrapRootElement = ({ element }) => {
-  return <Theme>{element}</Theme>;
+  return (
+    <GlobalContextProvider>
+      <Theme>{element}</Theme>
+    </GlobalContextProvider>
+  );
 };

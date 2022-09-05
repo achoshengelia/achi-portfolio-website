@@ -12,7 +12,7 @@ const Projects = () => {
   const pairs = chunk(projects, 2);
 
   return (
-    <ContainerStyled>
+    <ContainerStyled id="projects">
       <CenterWrapperStyled>
         <MainHeading>Selected projects</MainHeading>
 

@@ -1,5 +1,6 @@
 export * from './global/Layout';
 export * from './global/Icons';
+export * from './global/Header';
 export * from './global/Footer';
 export * from './global/Technologies';
 export * from './global/AnimatedLink';

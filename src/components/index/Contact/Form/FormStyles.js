@@ -20,6 +20,7 @@ export const FieldStyled = styled(Field)`
   border-color: ${({ $isError, theme }) =>
     $isError ? theme.colors.text.accent : null};
   ${({ $isError }) => ($isError ? AnimateField : null)};
+  transition: opacity 0.2s ease;
 
   &::placeholder {
     opacity: 1;

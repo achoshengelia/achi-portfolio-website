@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useRefScrollProgress = inputRef => {
   const ref = inputRef;
@@ -6,7 +6,7 @@ const useRefScrollProgress = inputRef => {
   const [start, setStart] = useState(null);
   const [end, setEnd] = useState(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!ref.current) {
       return;
     }

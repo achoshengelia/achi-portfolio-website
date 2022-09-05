@@ -54,7 +54,7 @@ export const LinkStyled = styled.a`
 
   &::before {
     content: '';
-    position: absolute;
+    position: ${({ $noUnderline }) => ($noUnderline ? 'static' : 'absolute')};
     width: 100%;
     left: 0;
     background-color: ${props => props.theme.colors.text.accent};

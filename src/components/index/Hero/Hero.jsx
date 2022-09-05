@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTransform, useScroll } from 'framer-motion';
+import { GlobalContext } from 'providers';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
-  BallWrapper,
-  BouncingBall,
+  BallWrapperStyled,
+  BouncingBallStyled,
   ContainerStyled,
   HeaderStyled,
   HeadingWrapperStyled,
   ParagraphStyled,
   ShineStyled,
-  Svg
+  SvgStyled
 } from './HeroStyles';
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 100], [1, 0]);
+  const { animate } = useContext(GlobalContext);
 
   return (
-    <ContainerStyled>
+    <ContainerStyled animate={animate}>
       <CenterWrapperStyled>
         <HeaderStyled
           style={{
@@ -27,9 +29,9 @@ const Hero = () => {
           <AnimatedHeading />
           <ParagraphStyled>Frontend Developer</ParagraphStyled>
         </HeaderStyled>
-        <BallWrapper>
-          <BouncingBall />
-        </BallWrapper>
+        <BallWrapperStyled>
+          <BouncingBallStyled />
+        </BallWrapperStyled>
       </CenterWrapperStyled>
     </ContainerStyled>
   );
@@ -42,7 +44,11 @@ const AnimatedHeading = () => {
     <HeadingWrapperStyled>
       <ShineStyled />
 
-      <Svg viewBox="0 0 696 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <SvgStyled
+        viewBox="0 0 696 72"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           d="M16.84 2.79998H35.464L49.384 70H34.792L32.776 54.256V42.544L29.032 44.08H22.888L19.144 42.544V54.256L17.128 70H2.92001L16.84 2.79998ZM24.232 31.6H27.688L31.336 33.04L28.072 14.32H23.848L20.584 33.04L24.232 31.6Z"
           stroke="#011627"
@@ -108,7 +114,7 @@ const AnimatedHeading = () => {
           stroke="#011627"
           strokeWidth="4"
         />
-      </Svg>
+      </SvgStyled>
     </HeadingWrapperStyled>
   );
 };

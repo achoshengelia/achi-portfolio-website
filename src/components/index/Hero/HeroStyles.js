@@ -9,7 +9,7 @@ import {
 } from 'styles/animations';
 import { customMediaQuery } from 'utils';
 
-export const BouncingBall = styled.div`
+export const BouncingBallStyled = styled.div`
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
@@ -19,18 +19,18 @@ export const BouncingBall = styled.div`
   animation-iteration-count: infinite;
 `;
 
-export const BallWrapper = styled.div`
-  position: relative;
+export const BallWrapperStyled = styled.div`
+  position: absolute;
+  bottom: 2rem;
   border: 1px solid ${props => props.theme.colors.text.main};
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  margin-top: auto;
   margin-bottom: 3rem;
   opacity: 0;
   animation: ${FadeIn} 0.2s ease forwards 4.5s;
 
-  & ${BouncingBall} {
+  & ${BouncingBallStyled} {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,7 +67,7 @@ export const ShineStyled = styled.div`
   }
 `;
 
-export const Svg = styled.svg`
+export const SvgStyled = styled.svg`
   width: 100vw;
   max-width: 120rem;
   padding: 0 2rem;
@@ -78,7 +78,7 @@ export const Svg = styled.svg`
     stroke-dashoffset: 100%;
     animation: ${StrokeAnimate} 3s cubic-bezier(0.22, 0, 0.67, 0) forwards;
     padding: 2rem;
-    opacity: 0;
+    /* opacity: 0; */
     stroke: ${props => props.theme.colors.text.main};
   }
 `;
@@ -108,7 +108,7 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const HeaderStyled = styled(motion.header)`
-  margin-top: auto;
+  margin-bottom: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,4 +117,17 @@ export const HeaderStyled = styled(motion.header)`
 
 export const ContainerStyled = styled.section`
   height: 100vh;
+
+  & ${SvgStyled} {
+    & path {
+      opacity: ${({ animate }) => (!animate ? '1' : '0')};
+      animation: ${({ animate }) => (!animate ? 'none' : null)};
+      stroke-dashoffset: ${({ animate }) => (!animate ? '0' : null)};
+    }
+  }
+
+  & ${ParagraphStyled}, ${BallWrapperStyled} {
+    opacity: ${({ animate }) => (!animate ? '1' : '0')};
+    animation: ${({ animate }) => (!animate ? 'none' : null)};
+  }
 `;

@@ -32,3 +32,9 @@ export const slugify = str =>
     .trim()
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
+
+export const isExternalLink = url => {
+  const tmp = document.createElement('a');
+  tmp.href = url;
+  return tmp.host !== window.location.host;
+};
