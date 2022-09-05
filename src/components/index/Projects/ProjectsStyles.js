@@ -16,7 +16,17 @@ export const ProjectsContainerStyled = styled.div`
 `;
 
 export const ContainerStyled = styled.section`
+  margin-top: 20rem;
+
   & ${MainHeadingStyled} {
     align-self: flex-start;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    margin-top: 10rem;
+
+    & ${MainHeadingStyled} {
+      margin: 10rem 0;
+    }
   }
 `;

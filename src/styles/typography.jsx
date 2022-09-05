@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { customMediaQuery } from 'utils';
 
 export const TextGradientStyled = styled.span`
   background: linear-gradient(
@@ -18,7 +19,7 @@ export const MainHeadingStyled = styled(motion.h1)`
   color: ${props => props.theme.colors.text.light};
   overflow: hidden;
   display: flex;
-  margin: 20rem 0 10rem 0;
+  margin-bottom: 10rem;
 
   & > * + * {
     margin-left: 0.3em;
@@ -32,8 +33,9 @@ export const MainHeadingStyled = styled(motion.h1)`
     font-size: 5.5rem;
   }
 
-  @media ${props => props.theme.breakpoints.xs} {
-    font-size: 5rem;
+  ${customMediaQuery(435)} {
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
   }
 `;
 

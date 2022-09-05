@@ -36,7 +36,7 @@ export const GlobalContextProvider = ({ children }) => {
     setTimeout(() => {
       setOverflowHidden(false);
       setAnimate(false);
-    }, 5300);
+    }, 4800);
   }, [setOverflowHidden]);
 
   if (!isBrowser) return null;
