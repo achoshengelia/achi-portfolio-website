@@ -26,7 +26,6 @@ export const ExternalsWrapperStyled = styled.div``;
 export const ContainerStyled = styled.footer`
   padding: 5rem 0;
   background-color: ${props => props.theme.colors.text.main};
-  border-top-left-radius: 3rem;
 
   & > ${CenterWrapperStyled} {
     flex-direction: row;

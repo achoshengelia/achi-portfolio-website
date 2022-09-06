@@ -27,10 +27,9 @@ export const CenterWrapperStyled = styled.div`
 export const OverlayStyled = styled.div`
   position: absolute;
   width: 50%;
-  height: 50%;
+  height: 10rem;
   ${({ $isLeft }) => ($isLeft ? 'left: 0' : 'right: 0')};
-  bottom: -30%;
-  background-color: ${({ $isWhite, theme }) =>
-    $isWhite ? theme.colors.text.light : theme.colors.text.main};
+  bottom: -5%;
+  background-color: ${props => props.theme.colors.text.main};
   z-index: -25;
 `;

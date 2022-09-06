@@ -1,20 +1,24 @@
 import styled from 'styled-components';
+import { LinkStyled } from 'components/global/AnimatedLink/AnimatedLinkStyles';
 import { MainHeadingStyled } from 'styles/typography';
 
 export const ContainerStyled = styled.section`
   position: relative;
-  background-color: ${props => props.theme.colors.text.light};
-  border-bottom-right-radius: 3rem;
+  background-color: ${props => props.theme.colors.text.main};
+  border-top-left-radius: 3rem;
   min-height: 30vh;
-  margin-top: 20rem;
-  padding-bottom: 20rem;
+  /* margin-top: 20rem; */
+  padding: 20rem 0;
 
   & ${MainHeadingStyled} {
     text-align: center;
   }
 
+  & ${LinkStyled} {
+    color: ${props => props.theme.colors.text.light};
+  }
+
   @media ${props => props.theme.breakpoints.sm} {
-    margin-top: 10rem;
-    padding-bottom: 10rem;
+    padding: 10rem 0;
   }
 `;

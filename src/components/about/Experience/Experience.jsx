@@ -31,6 +31,7 @@ const Experience = () => {
           ))}
         </ExperienceListStyled>
       </CenterWrapperStyled>
+      <OverlayStyled />
     </ContainerStyled>
   );
 };

@@ -45,6 +45,10 @@ export const ExperienceListStyled = styled.ul`
 
 export const ContainerStyled = styled.section`
   margin-top: 20rem;
+  border-bottom-right-radius: 2rem;
+  background-color: ${props => props.theme.colors.text.light};
+  position: relative;
+  padding-bottom: 10rem;
 
   & ${CenterWrapperStyled} {
     flex-direction: row;
