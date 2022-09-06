@@ -34,7 +34,7 @@ export const ParagraphStyled = styled.p`
 
 export const ContainerStyled = styled.section`
   min-height: 100vh;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 
   & ${CenterWrapperStyled} {
     align-items: flex-start;

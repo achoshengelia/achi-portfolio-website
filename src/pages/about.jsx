@@ -1,11 +1,12 @@
 import React from 'react';
-import { Bio, HeroAbout } from 'components';
+import { Bio, HeroAbout, Skills } from 'components';
 
 const AboutPage = () => {
   return (
     <>
       <HeroAbout />
       <Bio />
+      <Skills />
     </>
   );
 };

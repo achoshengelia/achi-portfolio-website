@@ -11,6 +11,7 @@ export * from './index/Projects';
 export * from './index/Contact';
 export * from './about/Hero';
 export * from './about/Bio';
+export * from './about/Skills';
 export * from './project-details/Info';
 export * from './project-details/Cover';
 export * from './project-details/Challenge';
