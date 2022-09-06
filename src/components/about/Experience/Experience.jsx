@@ -1,7 +1,7 @@
-import { AnimatedLink } from 'components/global/AnimatedLink';
 import React from 'react';
+import { AnimatedLink } from 'components';
 import { MainHeading } from 'styles/typography';
-import { CenterWrapperStyled } from 'styles/utils';
+import { CenterWrapperStyled, OverlayStyled } from 'styles/utils';
 import {
   ContainerStyled,
   DescriptionStyled,
@@ -31,6 +31,7 @@ const Experience = () => {
           ))}
         </ExperienceListStyled>
       </CenterWrapperStyled>
+      <OverlayStyled />
     </ContainerStyled>
   );
 };

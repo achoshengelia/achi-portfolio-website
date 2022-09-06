@@ -24,6 +24,8 @@ export const SkillsWrapperStyled = styled.ul`
 `;
 
 export const ContainerStyled = styled.section`
+  margin-top: 20rem;
+
   & ${CenterWrapperStyled} {
     flex-direction: row;
     justify-content: flex-start;
@@ -64,6 +66,8 @@ export const ContainerStyled = styled.section`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
+    margin-top: 10rem;
+
     & ${CenterWrapperStyled} {
       & ${SkillsWrapperStyled} {
         column-gap: 5rem;

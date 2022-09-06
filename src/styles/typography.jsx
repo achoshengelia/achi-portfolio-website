@@ -31,6 +31,7 @@ export const MainHeadingStyled = styled(motion.h1)`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
+    margin-bottom: 7rem;
     font-size: 5.5rem;
   }
 

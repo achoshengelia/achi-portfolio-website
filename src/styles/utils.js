@@ -23,3 +23,14 @@ export const CenterWrapperStyled = styled.div`
     padding: 0 1.5rem;
   }
 `;
+
+export const OverlayStyled = styled.div`
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  ${({ $isLeft }) => ($isLeft ? 'left: 0' : 'right: 0')};
+  bottom: -30%;
+  background-color: ${({ $isWhite, theme }) =>
+    $isWhite ? theme.colors.text.light : theme.colors.text.main};
+  z-index: -25;
+`;

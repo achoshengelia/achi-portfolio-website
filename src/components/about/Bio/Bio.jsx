@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { AnimatedImage } from 'components';
 import { MainHeading } from 'styles/typography';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
@@ -8,7 +9,6 @@ import {
   ImagesWrapperStyled,
   ParagraphStyled
 } from './BioStyles';
-import { AnimatedImage } from 'components';
 
 const Bio = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedLink } from 'components';
-import { CenterWrapperStyled } from 'styles/utils';
+import { CenterWrapperStyled, OverlayStyled } from 'styles/utils';
 import { slugify } from 'utils';
 import { ContainerStyled } from './ExternalsStyles';
 
@@ -33,6 +33,7 @@ const Externals = ({ externals }) => {
         />
         <AnimatedLink text="Back home" to="/" $arrowPosition="left" />
       </CenterWrapperStyled>
+      <OverlayStyled $isLeft />
     </ContainerStyled>
   );
 };

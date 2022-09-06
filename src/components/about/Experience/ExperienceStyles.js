@@ -44,6 +44,11 @@ export const ExperienceListStyled = styled.ul`
 `;
 
 export const ContainerStyled = styled.section`
+  margin-top: 20rem;
+  border-bottom-right-radius: 2rem;
+  background-color: ${props => props.theme.colors.text.light};
+  position: relative;
+
   & ${CenterWrapperStyled} {
     flex-direction: row;
     justify-content: flex-start;
@@ -73,6 +78,8 @@ export const ContainerStyled = styled.section`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
+    margin-top: 20rem;
+
     & ${CenterWrapperStyled} {
       & ${ExperienceListStyled} {
         max-width: none;
