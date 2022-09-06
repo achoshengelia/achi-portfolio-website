@@ -43,6 +43,10 @@ export const ContainerStyled = styled.section`
   @media ${props => props.theme.breakpoints.sm} {
     font-size: 4rem;
 
+    & > ${CenterWrapperStyled} {
+      min-height: 70vh;
+    }
+
     ${ParagraphStyled} {
       & > div {
         max-width: 4rem;

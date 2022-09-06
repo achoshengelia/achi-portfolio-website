@@ -45,9 +45,6 @@ export const ExperienceListStyled = styled.ul`
 
 export const ContainerStyled = styled.section`
   margin-top: 20rem;
-  border-bottom-right-radius: 2rem;
-  background-color: ${props => props.theme.colors.text.light};
-  position: relative;
 
   & ${CenterWrapperStyled} {
     flex-direction: row;
@@ -78,7 +75,7 @@ export const ContainerStyled = styled.section`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
-    margin-top: 20rem;
+    margin-top: 10rem;
 
     & ${CenterWrapperStyled} {
       & ${ExperienceListStyled} {
