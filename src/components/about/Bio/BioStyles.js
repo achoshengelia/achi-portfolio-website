@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { MainHeadingStyled } from 'styles/typography';
 import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
 
@@ -34,14 +33,9 @@ export const ParagraphStyled = styled.p`
 
 export const ContainerStyled = styled.section`
   min-height: 100vh;
-  margin-bottom: 10rem;
 
   & ${CenterWrapperStyled} {
     align-items: flex-start;
-
-    & ${MainHeadingStyled} {
-      color: ${props => props.theme.colors.text.main};
-    }
   }
 
   @media ${props => props.theme.breakpoints.lg} {

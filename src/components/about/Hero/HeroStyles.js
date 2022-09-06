@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { CenterWrapperStyled } from 'styles/utils';
+import { customMediaQuery } from 'utils';
 
 export const ParagraphStyled = styled.div`
   max-width: 100rem;
@@ -26,6 +27,10 @@ export const ContainerStyled = styled.section`
   }
 
   @media ${props => props.theme.breakpoints.lg} {
+    & > ${CenterWrapperStyled} {
+      justify-content: flex-start;
+      margin-top: 10rem;
+    }
     font-size: 5rem;
   }
 
@@ -46,5 +51,9 @@ export const ContainerStyled = styled.section`
         transform: translateY(25%);
       }
     }
+  }
+
+  ${customMediaQuery(400)} {
+    font-size: 3.2rem;
   }
 `;

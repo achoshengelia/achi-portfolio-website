@@ -24,27 +24,41 @@ export const SkillsWrapperStyled = styled.ul`
 `;
 
 export const ContainerStyled = styled.section`
-  margin-bottom: 10rem;
-
   & ${CenterWrapperStyled} {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 
     & ${MainHeadingStyled} {
+      position: sticky;
+      top: 15%;
       flex-basis: 50%;
-      color: ${props => props.theme.colors.text.main};
     }
   }
 
-  ${customMediaQuery(930)} {
+  ${customMediaQuery(980)} {
     & ${CenterWrapperStyled} {
       flex-direction: column;
+
+      & ${MainHeadingStyled} {
+        position: static;
+        top: 0;
+        flex-basis: 50%;
+      }
 
       & ${SkillsWrapperStyled} {
         width: 100%;
         margin-left: 0;
         column-gap: 10rem;
+        grid-template-columns: repeat(3, max-content);
+      }
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    & ${CenterWrapperStyled} {
+      & ${SkillsWrapperStyled} {
+        grid-template-columns: repeat(2, max-content);
       }
     }
   }

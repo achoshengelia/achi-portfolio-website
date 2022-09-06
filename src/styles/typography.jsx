@@ -16,7 +16,8 @@ export const TextGradientStyled = styled.span`
 
 export const MainHeadingStyled = styled(motion.h1)`
   font-size: 8rem;
-  color: ${props => props.theme.colors.text.light};
+  color: ${({ $isDark, theme }) =>
+    $isDark ? theme.colors.text.main : theme.colors.text.light};
   overflow: hidden;
   display: flex;
   margin-bottom: 10rem;

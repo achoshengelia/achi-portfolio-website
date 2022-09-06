@@ -14,7 +14,7 @@ const Bio = () => {
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
-        <MainHeading>Bio</MainHeading>
+        <MainHeading $isDark>Bio</MainHeading>
         <ContentWrapperStyled>
           <Text />
           <ImagesWrapperStyled>

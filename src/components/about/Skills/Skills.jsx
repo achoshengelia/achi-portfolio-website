@@ -11,7 +11,7 @@ const Skills = () => {
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
-        <MainHeading>Skills</MainHeading>
+        <MainHeading $isDark>Skills</MainHeading>
         <SkillsWrapperStyled>
           {skills.map(skill => (
             <SkillStyled key={skill}>{skill}</SkillStyled>
