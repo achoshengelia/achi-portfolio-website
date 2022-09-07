@@ -6,6 +6,8 @@ export const ImageWrapperStyled = styled(motion.div)`
   overflow: hidden;
   transition: transform 0.7s ease;
   cursor: pointer;
+  mask-image: radial-gradient(white, black);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   & .gatsby-image {
     height: 100%;

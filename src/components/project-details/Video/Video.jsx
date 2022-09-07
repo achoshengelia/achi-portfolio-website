@@ -70,9 +70,8 @@ const Cursor = ({ isPlaying }) => {
 
     return () => {
       document.removeEventListener('mousemove', e => {
-        cursor.style.inset = `${e.clientY - 15}px auto auto ${
-          e.clientX - 15
-        }px`;
+        cursor.style.top = `${e.clientY - 15}px`;
+        cursor.style.left = `${e.clientX - 15}px`;
       });
     };
   }, [cursorRef]);

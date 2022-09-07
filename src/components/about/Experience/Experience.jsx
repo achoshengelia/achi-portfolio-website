@@ -44,7 +44,7 @@ const experiences = [
     link: 'https://www.altexsoft.com/',
     role: 'Frontend Developer / 2022 - Present',
     description:
-      'I worked on a project with a team of 15 people. We were building a new platform for a travel agency that would have an integrated booking system, admin panel and authentication. My tasks varied from refactoring existing code, implementing various functionalities in admin panel and other pages, to building fully responsive sub-pages from scratch.'
+      'I worked on a project with a team of 15 people. We were building a new platform for a travel agency that would have a search engine, integrated booking system, admin panel and authentication. My tasks varied from refactoring existing code, implementing various functionalities in admin panel and other pages, to building fully responsive sub-pages from scratch.'
   },
   {
     company: 'Freelance',

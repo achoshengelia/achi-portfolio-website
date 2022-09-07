@@ -8,6 +8,8 @@ export const ImageWrapperStyled = styled.div`
   overflow: hidden;
   max-height: 95rem;
   background: grey;
+  mask-image: radial-gradient(white, black);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   & img {
     object-fit: cover;

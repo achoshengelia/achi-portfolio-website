@@ -8,6 +8,7 @@ export const GridWrapperStyled = styled.div`
     isSecondLayout ? '"a a a" "b c d"' : '"a a a" "b b c" "b b d"'};
   gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
   width: 100%;
   height: 100%;
 `;

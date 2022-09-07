@@ -34,7 +34,9 @@ export const slugify = str =>
     .replace(/^-+|-+$/g, '');
 
 export const isExternalLink = url => {
-  const tmp = document.createElement('a');
-  tmp.href = url;
-  return tmp.host !== window.location.host;
+  if (isBrowser) {
+    const tmp = document.createElement('a');
+    tmp.href = url;
+    return tmp.host !== window.location.host;
+  }
 };

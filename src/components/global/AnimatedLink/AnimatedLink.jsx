@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { isExternalLink } from 'utils';
+import { isBrowser, isExternalLink } from 'utils';
 import {
   LinkStyled,
   ArrowWrapperStyled,
@@ -8,8 +8,10 @@ import {
 } from './AnimatedLinkStyles';
 
 const handleScrollTop = e => {
-  e.preventDefault();
-  window.scrollTo(0, 0);
+  if (isBrowser) {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+  }
 };
 
 const AnimatedLink = ({ noArrow, text, href, to, isScrollTop, ...props }) => {
