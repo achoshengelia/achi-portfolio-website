@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import { useAnimationControls } from 'framer-motion';
 import { GlobalContext } from 'providers';
 import { ContainerStyled, WallpaperStyled } from './LoaderStyles';
@@ -7,11 +7,11 @@ const Loader = () => {
   const { transitionPage } = useContext(GlobalContext);
   const controls = useAnimationControls();
 
-  const sequence = async () => {
+  const sequence = useCallback(async () => {
     await controls.start('initial');
     await controls.start('animate');
     return await controls.start('exit');
-  };
+  }, [controls]);
 
   useEffect(() => {
     if (transitionPage) {
