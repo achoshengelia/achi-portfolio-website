@@ -9,7 +9,7 @@ const ContactMe = () => {
     <ContainerStyled>
       <CenterWrapperStyled>
         <MainHeading slideUp>Want to send me a message?</MainHeading>
-        <AnimatedLink text="Let's talk" to="/#contact" />
+        <AnimatedLink text="Let's talk" to="#contact" />
       </CenterWrapperStyled>
     </ContainerStyled>
   );

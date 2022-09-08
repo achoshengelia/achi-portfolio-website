@@ -1,4 +1,5 @@
 export * from './global/Layout';
+export * from './global/Loader';
 export * from './global/Icons';
 export * from './global/Header';
 export * from './global/Footer';

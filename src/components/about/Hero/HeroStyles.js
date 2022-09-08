@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
 
-export const ParagraphStyled = styled.div`
+export const ParagraphStyled = styled(motion.div)`
   max-width: 100rem;
   margin-bottom: 10rem;
 

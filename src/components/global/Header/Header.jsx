@@ -59,7 +59,7 @@ const listItems = [
     text: 'achi shengelia'
   },
   {
-    link: '/#projects',
+    link: '#projects',
     text: 'projects'
   },
   {
@@ -67,7 +67,7 @@ const listItems = [
     text: 'about'
   },
   {
-    link: '/#contact',
+    link: '#contact',
     text: 'contact'
   }
 ];

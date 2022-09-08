@@ -1,29 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
-import { isBrowser, isExternalLink } from 'utils';
+import { useLocation } from '@reach/router';
+import { GlobalContext } from 'providers';
+import { handleNavigate, isExternalLink } from 'utils';
 import {
   LinkStyled,
   ArrowWrapperStyled,
   SvgStyled
 } from './AnimatedLinkStyles';
 
-const handleScrollTop = e => {
-  if (isBrowser) {
-    e.preventDefault();
-    window.scrollTo(0, 0);
-  }
-};
-
 const AnimatedLink = ({ noArrow, text, href, to, isScrollTop, ...props }) => {
   const url = href || to;
   const isExternal = isExternalLink(url);
+  const { setTransitionPage } = useContext(GlobalContext);
+  const { pathname } = useLocation();
 
   return (
     <LinkStyled
       as={!isExternal ? Link : null}
       href={isExternal ? url : null}
       to={!isExternal ? url : null}
-      onClick={isScrollTop ? handleScrollTop : null}
+      onClick={
+        !isExternal
+          ? handleNavigate({
+              isScrollTop,
+              pathname,
+              url,
+              setTransitionPage
+            })
+          : null
+      }
       {...props}
     >
       {text}
