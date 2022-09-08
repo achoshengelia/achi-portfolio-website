@@ -4,6 +4,7 @@ import { useScroll } from 'framer-motion';
 import Lottie from 'lottie-react';
 import eye from 'assets/lotties/eye.json';
 import sphere from 'assets/lotties/sphere.json';
+import { isBrowser } from 'utils';
 import { TextGradientStyled } from 'styles/typography';
 import { CenterWrapperStyled } from 'styles/utils';
 import {
@@ -23,10 +24,11 @@ const About = () => {
   return (
     <ContainerStyled ref={ref}>
       <CenterWrapperStyled>
-        {createPortal(
-          <BackgroundStyled style={{ opacity: scrollYProgress }} />,
-          document.getElementById('menu')
-        )}
+        {isBrowser &&
+          createPortal(
+            <BackgroundStyled style={{ opacity: scrollYProgress }} />,
+            document.getElementById('menu')
+          )}
 
         <ParagraphWrapperStyled
           initial={{ opacity: 0, y: 200 }}

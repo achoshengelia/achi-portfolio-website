@@ -9,6 +9,7 @@ import { customMediaQuery } from 'utils';
 export const ContainerStyled = styled.section`
   color: ${props => props.theme.colors.text.light};
   padding: 10rem 0;
+  position: relative;
 
   & > ${CenterWrapperStyled} {
     align-items: flex-start;

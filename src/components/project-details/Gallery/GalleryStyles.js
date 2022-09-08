@@ -1,42 +1,6 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
-
-export const MotionWrapperStyled = styled(motion.div)``;
-
-export const ImageWrapperStyled = styled.div`
-  border-radius: 2rem;
-  overflow: hidden;
-  max-height: 95rem;
-  background: grey;
-
-  & img {
-    object-fit: cover;
-  }
-
-  & * {
-    height: 100%;
-    width: 100%;
-  }
-
-  &:first-child {
-    grid-area: a;
-  }
-
-  &:nth-child(2) {
-    grid-area: b;
-  }
-
-  &:nth-child(3) {
-    grid-area: c;
-    max-height: 60rem;
-  }
-
-  &:nth-child(4) {
-    grid-area: d;
-  }
-`;
 
 export const GridWrapperStyled = styled.div`
   display: grid;
@@ -44,6 +8,7 @@ export const GridWrapperStyled = styled.div`
     isSecondLayout ? '"a a a" "b c d"' : '"a a a" "b b c" "b b d"'};
   gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
   width: 100%;
   height: 100%;
 `;
@@ -71,10 +36,6 @@ export const ContainerStyled = styled.section`
       grid-template-areas: ${({ isSecondLayout }) =>
         isSecondLayout ? '"a a a" "b c d"' : '"a a" "b b" "c d"'};
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    & ${ImageWrapperStyled} {
-      max-height: 50rem;
     }
   }
 

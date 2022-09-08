@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GlobalContext } from 'providers';
 import { Technologies } from 'components';
-import { isMobileDevice, slugify } from 'utils';
+import { handleNavigate, isMobileDevice, slugify } from 'utils';
 import {
   ContainerStyled,
   FigureCaptionStyled,
@@ -16,6 +17,7 @@ import {
 const Project = ({ data }) => {
   const { title, image, technologies } = data;
   const [isVisible, setIsVisible] = useState(false);
+  const { setTransitionPage } = useContext(GlobalContext);
 
   return (
     <ContainerStyled
@@ -30,7 +32,13 @@ const Project = ({ data }) => {
       <FigureStyled>
         <FigureCaptionStyled>{title}</FigureCaptionStyled>
 
-        <Link to={`projects/${slugify(title)}`}>
+        <Link
+          onClick={handleNavigate({
+            url: `projects/${slugify(title)}`,
+            setTransitionPage
+          })}
+          to={`projects/${slugify(title)}`}
+        >
           <ImageWrapperStyled
             onHoverStart={() => setIsVisible(true)}
             onHoverEnd={() => setIsVisible(false)}

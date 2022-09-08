@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useScrollDirection } from 'hooks';
 import { GlobalContext } from 'providers';
+import { isBrowser } from 'utils';
 import { CenterWrapperStyled } from 'styles/utils';
 import { AnimatedLink } from '../AnimatedLink';
 import Menu from './Menu/Menu';
@@ -32,17 +33,18 @@ const Header = () => {
           </UlStyled>
         </CenterWrapperStyled>
       </ContainerStyled>
-      {createPortal(
-        <AnimatePresence exitBeforeEnter>
-          {showMenu ? (
-            <Menu
-              listItems={getMenuListItems(listItems)}
-              handleClick={handleToggleMenu}
-            />
-          ) : null}
-        </AnimatePresence>,
-        document.getElementById('menu')
-      )}
+      {isBrowser &&
+        createPortal(
+          <AnimatePresence exitBeforeEnter>
+            {showMenu ? (
+              <Menu
+                listItems={getMenuListItems(listItems)}
+                handleClick={handleToggleMenu}
+              />
+            ) : null}
+          </AnimatePresence>,
+          document.getElementById('menu')
+        )}
     </>
   );
 };
@@ -57,7 +59,7 @@ const listItems = [
     text: 'achi shengelia'
   },
   {
-    link: '/#projects',
+    link: '#projects',
     text: 'projects'
   },
   {
@@ -65,7 +67,7 @@ const listItems = [
     text: 'about'
   },
   {
-    link: '/#contact',
+    link: '#contact',
     text: 'contact'
   }
 ];

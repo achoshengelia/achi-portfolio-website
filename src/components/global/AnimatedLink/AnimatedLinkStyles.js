@@ -28,7 +28,8 @@ export const LinkStyled = styled.a`
     position: absolute;
     left: 0;
     top: 0;
-    fill: ${props => props.theme.colors.text.light};
+    fill: ${({ $isDark, theme }) =>
+      $isDark ? theme.colors.text.main : theme.colors.text.light};
     width: 5.5rem;
     transform: ${({ $arrowPosition }) =>
       $arrowPosition === 'right'

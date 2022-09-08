@@ -16,7 +16,8 @@ export const TextGradientStyled = styled.span`
 
 export const MainHeadingStyled = styled(motion.h1)`
   font-size: 8rem;
-  color: ${props => props.theme.colors.text.light};
+  color: ${({ $isDark, theme }) =>
+    $isDark ? theme.colors.text.main : theme.colors.text.light};
   overflow: hidden;
   display: flex;
   margin-bottom: 10rem;
@@ -30,6 +31,7 @@ export const MainHeadingStyled = styled(motion.h1)`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
+    margin-bottom: 7rem;
     font-size: 5.5rem;
   }
 

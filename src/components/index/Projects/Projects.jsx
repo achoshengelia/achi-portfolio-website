@@ -38,7 +38,7 @@ const query = graphql`
         title
         image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: FULL_WIDTH, quality: 100)
           }
         }
         technologies
