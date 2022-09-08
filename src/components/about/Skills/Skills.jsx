@@ -12,9 +12,17 @@ const Skills = () => {
     <ContainerStyled>
       <CenterWrapperStyled>
         <MainHeading $isDark>Skills</MainHeading>
-        <SkillsWrapperStyled>
+        <SkillsWrapperStyled
+          initial="initial"
+          whileInView="animate"
+          exit="exit"
+          variants={mainVariants}
+          viewport={{ once: true }}
+        >
           {skills.map(skill => (
-            <SkillStyled key={skill}>{skill}</SkillStyled>
+            <SkillStyled key={skill} variants={childVariants}>
+              {skill}
+            </SkillStyled>
           ))}
         </SkillsWrapperStyled>
       </CenterWrapperStyled>
@@ -34,3 +42,30 @@ const skills = [
   'CSS',
   'GIT'
 ];
+
+const mainVariants = {
+  animate: {
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.15,
+      ease: 'easeInOut',
+      delayChildren: 0.3
+    }
+  }
+};
+
+const childVariants = {
+  initial: {
+    y: 20,
+    opacity: 0
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+      ease: [0.16, 1, 0.3, 1]
+    }
+  }
+};

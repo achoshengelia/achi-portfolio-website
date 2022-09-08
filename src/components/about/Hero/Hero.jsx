@@ -2,14 +2,14 @@ import React from 'react';
 import Lottie from 'lottie-react';
 import clock from 'assets/lotties/clock.json';
 import { TextGradientStyled } from 'styles/typography';
-import { CenterWrapperStyled } from 'styles/utils';
+import { CenterWrapperStyled, motionDefaultAnimateProps } from 'styles/utils';
 import { ContainerStyled, ParagraphStyled } from './HeroStyles';
 
 const Hero = () => {
   return (
     <ContainerStyled>
       <CenterWrapperStyled>
-        <ParagraphStyled>
+        <ParagraphStyled {...motionDefaultAnimateProps}>
           The <TextGradientStyled>tech </TextGradientStyled> industry is rapidly
           shifting, improving and growing. <Lottie animationData={clock} /> I
           believe, as a developer, it is{' '}

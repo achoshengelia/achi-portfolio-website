@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { AnimatedImage } from 'components';
 import { MainHeading } from 'styles/typography';
-import { CenterWrapperStyled } from 'styles/utils';
+import { CenterWrapperStyled, motionDefaultAnimateProps } from 'styles/utils';
 import {
   ContainerStyled,
   ContentWrapperStyled,
@@ -15,24 +15,9 @@ const Bio = () => {
     <ContainerStyled>
       <CenterWrapperStyled>
         <MainHeading $isDark>Bio</MainHeading>
-        <ContentWrapperStyled>
+        <ContentWrapperStyled {...motionDefaultAnimateProps}>
           <Text />
-          <ImagesWrapperStyled>
-            <AnimatedImage isStatic>
-              <StaticImage
-                src="../../../assets/media/achi-1.jpg"
-                alt="picture of Achi Shengelia"
-                quality={100}
-              />
-            </AnimatedImage>
-            <AnimatedImage isStatic>
-              <StaticImage
-                src="../../../assets/media/achi-2.jpg"
-                alt="picture of Achi Shengelia"
-                quality={100}
-              />
-            </AnimatedImage>
-          </ImagesWrapperStyled>
+          <Images />
         </ContentWrapperStyled>
       </CenterWrapperStyled>
     </ContainerStyled>
@@ -56,5 +41,26 @@ const Text = () => {
       almost 2 years of experience (as a freelancer and working in a company)
       and I'm looking for new challenges.
     </ParagraphStyled>
+  );
+};
+
+const Images = () => {
+  return (
+    <ImagesWrapperStyled>
+      <AnimatedImage isStatic>
+        <StaticImage
+          src="../../../assets/media/achi-1.jpg"
+          alt="picture of Achi Shengelia"
+          quality={100}
+        />
+      </AnimatedImage>
+      <AnimatedImage isStatic>
+        <StaticImage
+          src="../../../assets/media/achi-2.jpg"
+          alt="picture of Achi Shengelia"
+          quality={100}
+        />
+      </AnimatedImage>
+    </ImagesWrapperStyled>
   );
 };

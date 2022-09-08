@@ -104,6 +104,8 @@ export const ParagraphStyled = styled.p`
 
   @media ${props => props.theme.breakpoints.sm} {
     font-size: 5rem;
+    text-align: center;
+    line-height: 7rem;
   }
 `;
 

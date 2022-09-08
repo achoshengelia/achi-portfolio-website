@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { MainHeadingStyled } from 'styles/typography';
 import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
 
-export const SkillStyled = styled.li`
+export const SkillStyled = styled(motion.li)`
   font-size: 2.8rem;
   display: flex;
   justify-content: center;
@@ -14,7 +15,7 @@ export const SkillStyled = styled.li`
   width: max-content;
 `;
 
-export const SkillsWrapperStyled = styled.ul`
+export const SkillsWrapperStyled = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(2, max-content);
   row-gap: 3rem;

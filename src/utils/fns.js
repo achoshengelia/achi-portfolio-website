@@ -51,8 +51,6 @@ export const scrollTo = id => {
     const elementPosition = element?.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-    console.log(element);
-
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
@@ -89,7 +87,7 @@ export const handleNavigate = props => e => {
 
       return setTimeout(() => {
         scrollTo(id);
-      }, 50);
+      }, 400);
     }
     navigate(url);
   }, 3000);

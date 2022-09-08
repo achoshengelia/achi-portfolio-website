@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import {
   LinkStyled,
   SvgStyled
@@ -18,7 +19,7 @@ export const RoleYearStyled = styled.div`
   margin-top: 1rem;
 `;
 
-export const ExperienceStyled = styled.li`
+export const ExperienceStyled = styled(motion.li)`
   & > ${LinkStyled} {
     font-size: 3.5rem;
 
@@ -34,7 +35,7 @@ export const ExperienceStyled = styled.li`
   }
 `;
 
-export const ExperienceListStyled = styled.ul`
+export const ExperienceListStyled = styled(motion.ul)`
   flex-basis: 50%;
   margin-left: 8rem;
 

@@ -15,9 +15,15 @@ const Experience = () => {
     <ContainerStyled>
       <CenterWrapperStyled>
         <MainHeading $isDark>Experience</MainHeading>
-        <ExperienceListStyled>
+        <ExperienceListStyled
+          initial="initial"
+          whileInView="animate"
+          exit="exit"
+          variants={mainVariants}
+          viewport={{ once: true }}
+        >
           {experiences.map(({ company, link, role, description }) => (
-            <ExperienceStyled key={company}>
+            <ExperienceStyled key={company} variants={childVariants}>
               <AnimatedLink
                 href={link}
                 text={company}
@@ -61,3 +67,30 @@ const experiences = [
       'I worked as an audio engineer before I switched my profession and became a web developer. My responsibilities included recording, editing, mixing, mastering, as well as doing live sound at concerts.'
   }
 ];
+
+const mainVariants = {
+  animate: {
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.3,
+      ease: 'easeInOut',
+      delayChildren: 0.3
+    }
+  }
+};
+
+const childVariants = {
+  initial: {
+    y: 20,
+    opacity: 0
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+      ease: [0.16, 1, 0.3, 1]
+    }
+  }
+};

@@ -33,3 +33,10 @@ export const OverlayStyled = styled.div`
   background-color: ${props => props.theme.colors.text.main};
   z-index: -25;
 `;
+
+export const motionDefaultAnimateProps = {
+  initial: { opacity: 0, y: 200 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 },
+  viewport: { once: true }
+};
