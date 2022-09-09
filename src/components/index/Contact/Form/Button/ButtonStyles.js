@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Load } from 'styles/animations';
 
 export const CircleStyled = styled.span`
   height: 3rem;
@@ -22,13 +23,19 @@ export const CircleStyled = styled.span`
   }
 `;
 
+export const LoadingWrapperStyled = styled.span`
+  display: inline-block;
+`;
+
+export const WordWrapperStyled = styled.span``;
+
 export const ButtonStyled = styled.button`
   border: none;
   border-radius: 2rem;
   font-size: 2.5rem;
   padding: 0.3em 1em;
-  cursor: pointer;
-  margin-left: 3rem;
+  cursor: ${({ isLoading, isSuccess }) =>
+    isLoading ? 'wait' : isSuccess ? 'default' : 'pointer'};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +45,23 @@ export const ButtonStyled = styled.button`
   overflow: hidden;
   align-self: flex-end;
   margin-top: 3rem;
+  margin-left: auto;
+  width: ${({ isLoading }) => (isLoading ? '0' : '100%')};
+  transition: all 0.5s ease;
+
+  & ${LoadingWrapperStyled} {
+    ${({ isLoading }) => (isLoading ? AnimateButton : null)};
+  }
+
+  & ${WordWrapperStyled} {
+    width: ${({ isLoading }) => (isLoading ? '0' : '100%')};
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  & ${CircleStyled} {
+    opacity: ${({ isSuccess }) => (isSuccess ? '.6' : null)};
+  }
 
   &::before {
     content: '';
@@ -53,16 +77,23 @@ export const ButtonStyled = styled.button`
 
   &:hover {
     &::before {
-      transform: scaleY(1);
+      transform: ${({ isLoading, isSuccess }) =>
+        isLoading || isSuccess ? null : 'scaleY(1)'};
       transform-origin: bottom;
     }
 
     & ${CircleStyled} {
-      transform: scale(1.2);
+      transform: ${({ isLoading, isSuccess }) =>
+        isLoading || isSuccess ? null : 'scale(1.2)'};
 
       & > svg {
-        opacity: 1;
+        opacity: ${({ isLoading, isSuccess }) =>
+          isLoading || isSuccess ? null : '1'};
       }
     }
   }
+`;
+
+const AnimateButton = css`
+  animation: ${Load} 1.5s ease infinite;
 `;

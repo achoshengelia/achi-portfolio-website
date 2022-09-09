@@ -1,5 +1,17 @@
 import { keyframes } from 'styled-components';
 
+export const Load = keyframes`
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(-60%) scale(1.6);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+`;
+
 export const Bounce = keyframes`
   0% {
       top: 0;

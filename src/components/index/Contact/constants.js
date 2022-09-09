@@ -38,8 +38,8 @@ export const fields = [
 export const isInfo = field => field === 'info';
 
 export const validationSchema = yup.object({
-  name: yup.string().required(),
+  name: yup.string().min(2).required(),
   email: yup.string().email().required(),
-  subject: yup.string().required(),
-  info: yup.string().required()
+  subject: yup.string().min(10).required(),
+  info: yup.string().min(50).required()
 });

@@ -1,56 +1,53 @@
-import React, { Fragment } from 'react';
+import React, { useRef } from 'react';
 import { Formik } from 'formik';
-import { initialValues, fields, isInfo, validationSchema } from '../constants';
+import { useFormState } from 'hooks';
+import { initialValues, validationSchema } from '../constants';
 import Button from './Button/Button';
-import {
-  ButtonWrapperStyled,
-  FieldStyled,
-  FieldsWrapperStyled,
-  FormStyled
-} from './FormStyles';
+import Fields from './Fields/Fields';
+import Response from './Response/Response';
+import { ButtonWrapperStyled, FormStyled } from './FormStyles';
 
 const Form = () => {
+  const { values, actions } = useFormState();
+  const formRef = useRef(null);
+
+  const buttonProps = {
+    isLoading: values.isLoading,
+    isSuccess: values.isSuccess,
+    isError: values.isError,
+    handleReset: actions.handleReset,
+    handleSubmit: actions.handleInitialSubmit
+  };
+
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      validateOnChange={false}
-      validateOnBlur={false}
-      onSubmit={() => console.log('submitted')}
+      validateOnChange={values.isSubmitted}
+      validateOnBlur={values.isSubmitted}
+      onSubmit={actions.handleSubmit(formRef)}
     >
-      {({ errors, values, handleChange, handleBlur }) => (
-        <FormStyled noValidate>
-          <FieldsWrapperStyled
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            {fields.map(({ startText, field, type, placeholder, endText }) => (
-              <Fragment key={field}>
-                {startText}
-                <FieldStyled
-                  type={!isInfo(field) ? type : null}
-                  as={isInfo(field) ? 'textarea' : null}
-                  rows={isInfo(field) ? '1' : null}
-                  name={field}
-                  placeholder={placeholder}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  $isEmpty={!values[field].length}
-                  $isError={errors[field]?.length}
-                />
-                {endText}
-              </Fragment>
-            ))}
-          </FieldsWrapperStyled>
+      {() => (
+        <FormStyled ref={formRef} noValidate>
+          <Fields isHidden={values.isSuccess || values.isError} />
+          <Response
+            isVisible={values.isSuccess || values.isError}
+            isSuccess={values.isSuccess}
+          />
+
           <ButtonWrapperStyled
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.2 }}
             viewport={{ once: true }}
           >
-            <Button>Send</Button>
+            <Button {...buttonProps}>
+              {values.isSuccess
+                ? 'sent'
+                : values.isError
+                ? 'try again'
+                : 'send'}
+            </Button>
           </ButtonWrapperStyled>
         </FormStyled>
       )}
