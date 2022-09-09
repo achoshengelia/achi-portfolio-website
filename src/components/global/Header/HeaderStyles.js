@@ -34,8 +34,8 @@ export const ContainerStyled = styled.header`
   height: 8rem;
   background-color: ${props => props.theme.colors.text.light};
   z-index: 5;
-  transform: ${({ scrollDirection, animate }) =>
-    scrollDirection === 'down' || animate
+  transform: ${({ scrollDirection, animate, isHomePage }) =>
+    scrollDirection === 'down' || animate || (animate === null && isHomePage)
       ? 'translateY(-200%)'
       : 'translateY(0)'};
   transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);

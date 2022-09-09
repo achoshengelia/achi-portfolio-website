@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useScrollDirection } from 'hooks';
 import { GlobalContext } from 'providers';
-import { isBrowser } from 'utils';
+import { isBrowser, isHomePage } from 'utils';
 import { CenterWrapperStyled } from 'styles/utils';
 import { AnimatedLink } from '../AnimatedLink';
 import Menu from './Menu/Menu';
@@ -14,9 +14,14 @@ const Header = () => {
   const scrollDirection = useScrollDirection();
   const { animate, showMenu, handleToggleMenu } = useContext(GlobalContext);
 
+  console.log(scrollDirection, animate);
   return (
     <>
-      <ContainerStyled scrollDirection={scrollDirection} animate={animate}>
+      <ContainerStyled
+        scrollDirection={scrollDirection}
+        animate={animate}
+        isHomePage={isHomePage()}
+      >
         <CenterWrapperStyled as="nav">
           <UlStyled>
             {listItems.map(({ link, text }, i) => (

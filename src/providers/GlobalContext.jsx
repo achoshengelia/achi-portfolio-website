@@ -42,7 +42,7 @@ export const GlobalContextProvider = ({ children }) => {
       setOverflowHidden(false);
       setAnimate(false);
     }, 4800);
-  }, [setOverflowHidden]);
+  }, []);
 
   if (!isBrowser) return null;
 

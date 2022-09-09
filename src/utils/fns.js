@@ -90,5 +90,5 @@ export const handleNavigate = props => e => {
       }, 400);
     }
     navigate(url);
-  }, 3000);
+  }, 2500);
 };
