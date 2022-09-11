@@ -75,20 +75,22 @@ export const ButtonStyled = styled.button`
     transition: transform 0.2s ease;
   }
 
-  &:hover {
-    &::before {
-      transform: ${({ isLoading, isSuccess }) =>
-        isLoading || isSuccess ? null : 'scaleY(1)'};
-      transform-origin: bottom;
-    }
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        transform: ${({ isLoading, isSuccess }) =>
+          isLoading || isSuccess ? null : 'scaleY(1)'};
+        transform-origin: bottom;
+      }
 
-    & ${CircleStyled} {
-      transform: ${({ isLoading, isSuccess }) =>
-        isLoading || isSuccess ? null : 'scale(1.2)'};
+      & ${CircleStyled} {
+        transform: ${({ isLoading, isSuccess }) =>
+          isLoading || isSuccess ? null : 'scale(1.2)'};
 
-      & > svg {
-        opacity: ${({ isLoading, isSuccess }) =>
-          isLoading || isSuccess ? null : '1'};
+        & > svg {
+          opacity: ${({ isLoading, isSuccess }) =>
+            isLoading || isSuccess ? null : '1'};
+        }
       }
     }
   }

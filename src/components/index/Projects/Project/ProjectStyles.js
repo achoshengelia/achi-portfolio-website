@@ -18,11 +18,13 @@ export const ImageWrapperStyled = styled(motion.div)`
     min-height: 52rem;
   }
 
-  &:hover {
-    transform: scale(0.96);
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(0.96);
 
-    & .gatsby-image {
-      transform: scale(1.1);
+      & .gatsby-image {
+        transform: scale(1.1);
+      }
     }
   }
 `;

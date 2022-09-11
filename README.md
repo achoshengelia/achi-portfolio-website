@@ -12,4 +12,4 @@ yarn start
 
 ## Credits
 
-Font "Pescante" by Ariel Martín Pérez. Download from Tunera http://www.tunera.xyz/
+Fonts: "Pescante" by Ariel Martín Pérez, "Paysage by Anton Moglia". Download from Tunera http://www.tunera.xyz/

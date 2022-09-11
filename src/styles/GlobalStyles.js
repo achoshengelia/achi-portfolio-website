@@ -31,6 +31,10 @@ const GlobalStyles = createGlobalStyle`
   #gatsby-focus-wrapper {
     min-height: 100vh;
     overflow: ${({ overflowHidden }) => (overflowHidden ? 'hidden' : null)};
+    touch-action: ${({ overflowHidden }) => (overflowHidden ? 'none' : null)};
+    -ms-touch-action: ${({ overflowHidden }) =>
+      overflowHidden ? 'none' : null};
+
   }
 
   html {

@@ -66,31 +66,33 @@ export const LinkStyled = styled.a`
     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
   }
 
-  &:hover {
-    &::before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
 
-    & ${SvgStyled} {
-      transform: ${({ $arrowPosition }) =>
-        $arrowPosition === 'right'
-          ? 'translateX(-200%) rotate(45deg)'
-          : $arrowPosition === 'up'
-          ? 'translateY(-200%) rotate(-45deg)'
-          : $arrowPosition === 'left'
-          ? 'translateX(-200%) rotate(-135deg)'
-          : 'translateX(-200%)'};
-
-      &.animate {
+      & ${SvgStyled} {
         transform: ${({ $arrowPosition }) =>
           $arrowPosition === 'right'
-            ? 'translateX(0) rotate(45deg)'
+            ? 'translateX(-200%) rotate(45deg)'
             : $arrowPosition === 'up'
-            ? 'translateY(0) rotate(-45deg)'
+            ? 'translateY(-200%) rotate(-45deg)'
             : $arrowPosition === 'left'
-            ? 'translateX(0) rotate(-135deg)'
-            : 'translateX(0)'};
+            ? 'translateX(-200%) rotate(-135deg)'
+            : 'translateX(-200%)'};
+
+        &.animate {
+          transform: ${({ $arrowPosition }) =>
+            $arrowPosition === 'right'
+              ? 'translateX(0) rotate(45deg)'
+              : $arrowPosition === 'up'
+              ? 'translateY(0) rotate(-45deg)'
+              : $arrowPosition === 'left'
+              ? 'translateX(0) rotate(-135deg)'
+              : 'translateX(0)'};
+        }
       }
     }
   }
