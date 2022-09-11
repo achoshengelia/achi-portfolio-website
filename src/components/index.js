@@ -1,6 +1,7 @@
 export * from './global/SEO';
 export * from './global/Layout';
 export * from './global/Loader';
+export * from './global/NotFound';
 export * from './global/Icons';
 export * from './global/Header';
 export * from './global/Footer';

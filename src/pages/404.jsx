@@ -1,7 +1,6 @@
 import React from 'react';
+import { NotFound } from 'components';
 
-const ErrorPage = () => {
-  return <div>ErrorPage</div>;
-};
+const NotFoundPage = () => <NotFound />;
 
-export default ErrorPage;
+export default NotFoundPage;

@@ -7,7 +7,6 @@ export const ContainerStyled = styled.section`
   background-color: ${props => props.theme.colors.text.main};
   border-top-left-radius: 3rem;
   min-height: 30vh;
-  /* margin-top: 20rem; */
   padding: 20rem 0;
 
   & ${MainHeadingStyled} {
