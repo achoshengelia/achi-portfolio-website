@@ -87,7 +87,7 @@ export const handleNavigate = props => e => {
 
       return setTimeout(() => {
         scrollTo(id);
-      }, 400);
+      }, 1500);
     }
     navigate(url);
   }, 2500);

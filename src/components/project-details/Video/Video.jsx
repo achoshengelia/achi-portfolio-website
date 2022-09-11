@@ -33,6 +33,7 @@ const Video = ({ video }) => {
           onClick={togglePlay}
           isPlaying={isPlaying}
           loop
+          playsInline
         >
           <source src={video.publicURL} />
         </VideoStyled>

@@ -40,6 +40,7 @@ export const ButtonStyled = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.text.light};
+  color: ${props => props.theme.colors.text.main};
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
