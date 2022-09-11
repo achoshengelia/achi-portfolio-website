@@ -15,7 +15,7 @@ const Video = ({ video }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const togglePlay = () => {
     const video = videoRef.current;
-    if (video.paused && !isMobileDevice()) {
+    if (video.paused) {
       video.play();
       setIsPlaying(true);
     } else {

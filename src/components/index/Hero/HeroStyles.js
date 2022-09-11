@@ -109,7 +109,7 @@ export const ParagraphStyled = styled.p`
   }
 `;
 
-export const HeaderStyled = styled(motion.header)`
+export const HeaderStyled = styled(motion.div)`
   margin-bottom: 20rem;
   display: flex;
   justify-content: center;

@@ -33,7 +33,9 @@ const Header = () => {
                 />
               </LiStyled>
             ))}
-            <Hamburger />
+            <li>
+              <Hamburger />
+            </li>
           </UlStyled>
         </CenterWrapperStyled>
       </ContainerStyled>
