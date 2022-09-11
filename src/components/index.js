@@ -1,3 +1,4 @@
+export * from './global/SEO';
 export * from './global/Layout';
 export * from './global/Loader';
 export * from './global/Icons';

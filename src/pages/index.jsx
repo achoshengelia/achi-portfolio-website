@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, About, Projects, Contact } from 'components';
+import { Hero, About, Projects, Contact, Seo } from 'components';
 
 const HomePage = () => {
   return (
@@ -13,3 +13,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const Head = () => {
+  return <Seo title="Home" />;
+};

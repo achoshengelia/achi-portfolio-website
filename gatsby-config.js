@@ -1,6 +1,14 @@
 const path = require('path');
 
 module.exports = {
+  siteMetadata: {
+    title: `Achi Shengelia`,
+    description: `A portfolio website of Achi Shengelia, a frontend developer.`,
+    twitterUsername: `@shengelia_achi`,
+    keywords: `Developer, Frontend Developer, React.js, TypeScript, JavaScript, Next.js, Gatsby.js`,
+    author: `Achi Shengelia`,
+    siteUrl: `https://www.achishengelia.com`
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-root-import`,

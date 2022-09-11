@@ -14,7 +14,6 @@ const Header = () => {
   const scrollDirection = useScrollDirection();
   const { animate, showMenu, handleToggleMenu } = useContext(GlobalContext);
 
-  console.log(scrollDirection, animate);
   return (
     <>
       <ContainerStyled

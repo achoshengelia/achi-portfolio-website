@@ -1,6 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Challenge, Cover, Externals, Gallery, Info, Video } from 'components';
+import { slugify } from 'utils';
+import {
+  Challenge,
+  Cover,
+  Externals,
+  Gallery,
+  Info,
+  Seo,
+  Video
+} from 'components';
 
 const ProjectTemplate = props => {
   const { projectsJson } = props.data;
@@ -63,3 +72,16 @@ export const query = graphql`
 `;
 
 export default ProjectTemplate;
+
+export const Head = ({ data }) => {
+  const { projectsJson } = data;
+  const description = projectsJson.details.info.description.join(' ');
+
+  return (
+    <Seo
+      title={projectsJson.title}
+      description={description}
+      pathname={`projects/${slugify(projectsJson.title)}`}
+    />
+  );
+};
