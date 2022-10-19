@@ -1,4 +1,10 @@
-import React, { createContext, useState, useLayoutEffect } from 'react';
+import React, {
+  createContext,
+  useState,
+  useLayoutEffect,
+  useMemo,
+  useCallback
+} from 'react';
 import { isBrowser, isHomePage } from 'utils';
 
 export const GlobalContext = createContext({
@@ -17,12 +23,22 @@ export const GlobalContextProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [transitionPage, setTransitionPage] = useState(false);
 
-  const handleToggleMenu = () => {
+  const handleToggleMenu = useCallback(() => {
     setShowMenu(prevState => !prevState);
     setOverflowHidden(!showMenu);
-  };
+  }, [showMenu]);
 
-  const contextValue = {
+  const contextValue = useMemo(() => {
+    return {
+      overflowHidden,
+      animate,
+      showMenu,
+      transitionPage,
+      setOverflowHidden,
+      handleToggleMenu,
+      setTransitionPage
+    };
+  }, [
     overflowHidden,
     animate,
     showMenu,
@@ -30,7 +46,7 @@ export const GlobalContextProvider = ({ children }) => {
     setOverflowHidden,
     handleToggleMenu,
     setTransitionPage
-  };
+  ]);
 
   useLayoutEffect(() => {
     if (window.scrollY === 0 && isHomePage()) {
