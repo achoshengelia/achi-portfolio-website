@@ -22,5 +22,5 @@ export const wrapRootElement = ({ element }) => {
 };
 
 export const shouldUpdateScroll = () => {
-  return [0, 0];
+  return false;
 };

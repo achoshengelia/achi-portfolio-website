@@ -17,7 +17,7 @@ import {
 const Project = ({ data }) => {
   const { title, image, technologies } = data;
   const [isVisible, setIsVisible] = useState(false);
-  const { setTransitionPage } = useContext(GlobalContext);
+  const { transitionPage, setTransitionPage } = useContext(GlobalContext);
 
   return (
     <ContainerStyled
@@ -35,6 +35,7 @@ const Project = ({ data }) => {
         <Link
           onClick={handleNavigate({
             url: `projects/${slugify(title)}`,
+            transitionPage,
             setTransitionPage
           })}
           to={`projects/${slugify(title)}`}

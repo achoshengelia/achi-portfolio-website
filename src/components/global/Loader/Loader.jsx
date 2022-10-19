@@ -20,13 +20,11 @@ const Loader = () => {
   }, [transitionPage, sequence]);
 
   return (
-    <>
-      <ContainerStyled variants={mainVariants} animate={controls}>
-        {[0, 1, 2, 3, 4].map(i => (
-          <WallpaperStyled key={i} variants={childVariants} />
-        ))}
-      </ContainerStyled>
-    </>
+    <ContainerStyled variants={mainVariants} animate={controls}>
+      {[0, 1, 2, 3, 4].map(i => (
+        <WallpaperStyled key={i} variants={childVariants} />
+      ))}
+    </ContainerStyled>
   );
 };
 

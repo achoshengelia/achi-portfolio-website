@@ -60,7 +60,9 @@ export const scrollTo = id => {
 
 export const handleNavigate = props => e => {
   e.preventDefault();
-  const { isScrollTop, pathname, url, setTransitionPage } = props;
+  const { isScrollTop, pathname, url, transitionPage, setTransitionPage } =
+    props;
+  if (transitionPage) return;
 
   // scroll top
   if (
@@ -90,5 +92,9 @@ export const handleNavigate = props => e => {
       }, 1500);
     }
     navigate(url);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   }, 2500);
 };

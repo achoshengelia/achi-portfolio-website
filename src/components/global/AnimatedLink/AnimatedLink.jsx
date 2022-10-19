@@ -12,7 +12,7 @@ import {
 const AnimatedLink = ({ noArrow, text, href, to, isScrollTop, ...props }) => {
   const url = href || to;
   const isExternal = isExternalLink(url);
-  const { setTransitionPage } = useContext(GlobalContext);
+  const { transitionPage, setTransitionPage } = useContext(GlobalContext);
   const { pathname } = useLocation();
 
   return (
@@ -26,6 +26,7 @@ const AnimatedLink = ({ noArrow, text, href, to, isScrollTop, ...props }) => {
               isScrollTop,
               pathname,
               url,
+              transitionPage,
               setTransitionPage
             })
           : null
