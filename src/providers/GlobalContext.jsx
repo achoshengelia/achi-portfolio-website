@@ -1,11 +1,11 @@
 import React, {
   createContext,
   useState,
-  useLayoutEffect,
+  useEffect,
   useMemo,
   useCallback
 } from 'react';
-import { isBrowser, isHomePage } from 'utils';
+import { isHomePage } from 'utils';
 
 export const GlobalContext = createContext({
   overflowHidden: null,
@@ -48,19 +48,23 @@ export const GlobalContextProvider = ({ children }) => {
     setTransitionPage
   ]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (window.scrollY === 0 && isHomePage()) {
       setOverflowHidden(true);
       setAnimate(true);
     }
 
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setOverflowHidden(false);
       setAnimate(false);
     }, 4800);
-  }, []);
 
-  if (!isBrowser) return null;
+    return () => {
+      setOverflowHidden(false);
+      setAnimate(false);
+      clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <GlobalContext.Provider value={contextValue}>

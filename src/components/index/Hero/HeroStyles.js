@@ -119,6 +119,7 @@ export const HeaderStyled = styled(motion.div)`
 
 export const ContainerStyled = styled.section`
   height: 100vh;
+  opacity: ${({ animate }) => (animate === null ? '0' : '1')};
 
   & ${SvgStyled} {
     & path {

@@ -22,19 +22,22 @@ const Experience = () => {
           variants={mainVariants}
           viewport={{ once: true }}
         >
-          {experiences.map(({ company, link, role, description }) => (
-            <ExperienceStyled key={company} variants={childVariants}>
-              <AnimatedLink
-                href={link}
-                text={company}
-                target="_blank"
-                rel="noreferrer"
-                $isDark
-              />
-              <RoleYearStyled>{role}</RoleYearStyled>
-              <DescriptionStyled>{description}</DescriptionStyled>
-            </ExperienceStyled>
-          ))}
+          {experiences.map(
+            ({ isExternalLink, company, link, role, description }) => (
+              <ExperienceStyled key={company} variants={childVariants}>
+                <AnimatedLink
+                  href={link}
+                  text={company}
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternalLink={isExternalLink}
+                  $isDark
+                />
+                <RoleYearStyled>{role}</RoleYearStyled>
+                <DescriptionStyled>{description}</DescriptionStyled>
+              </ExperienceStyled>
+            )
+          )}
         </ExperienceListStyled>
       </CenterWrapperStyled>
       <OverlayStyled />
@@ -50,21 +53,24 @@ const experiences = [
     link: 'https://www.altexsoft.com/',
     role: 'Frontend Developer / 2022 - Present',
     description:
-      'I worked on a project with a team of 15 people. We were building a new platform for a travel agency that would have a search engine, integrated booking system, admin panel and authentication. My tasks varied from refactoring existing code, implementing various functionalities in admin panel and other pages, to building fully responsive sub-pages from scratch.'
+      'I worked on a project with a team of 15 people. We were building a new platform for a travel agency that would have a search engine, integrated booking system, admin panel and authentication. My tasks varied from refactoring existing code, implementing various functionalities in admin panel and other pages, to building fully responsive sub-pages from scratch.',
+    isExternalLink: true
   },
   {
     company: 'Freelance',
     link: '#',
     role: 'Frontend Developer / 2021 - Present',
     description:
-      "I had a chance to work on different projects as a freelancer. I've built multiple portfolio websites using various tech stack and continue to take orders in my free time."
+      "I had a chance to work on different projects as a freelancer. I've built multiple portfolio websites using various tech stack and continue to take orders in my free time.",
+    isExternalLink: false
   },
   {
     company: 'Lenø Records',
     link: 'http://www.lenorecords.com/',
     role: 'Audio Engineer / 2019 - 2020',
     description:
-      'I worked as an audio engineer before I switched my profession and became a web developer. My responsibilities included recording, editing, mixing, mastering, as well as doing live sound at concerts.'
+      'I worked as an audio engineer before I switched my profession and became a web developer. My responsibilities included recording, editing, mixing, mastering, as well as doing live sound at concerts.',
+    isExternalLink: true
   }
 ];
 

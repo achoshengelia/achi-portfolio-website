@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { createPortal } from 'react-dom';
+import { useLocation } from '@reach/router';
 import { AnimatePresence } from 'framer-motion';
 import { useScrollDirection } from 'hooks';
 import { GlobalContext } from 'providers';
-import { isBrowser, isHomePage } from 'utils';
+import { isBrowser } from 'utils';
 import { CenterWrapperStyled } from 'styles/utils';
 import { AnimatedLink } from '../AnimatedLink';
 import Menu from './Menu/Menu';
@@ -13,13 +14,14 @@ import { ContainerStyled, LiStyled, UlStyled } from './HeaderStyles';
 const Header = () => {
   const scrollDirection = useScrollDirection();
   const { animate, showMenu, handleToggleMenu } = useContext(GlobalContext);
+  const location = useLocation();
 
   return (
     <>
       <ContainerStyled
         scrollDirection={scrollDirection}
         animate={animate}
-        isHomePage={isHomePage()}
+        isHomePage={location.pathname === '/'}
       >
         <CenterWrapperStyled as="nav">
           <UlStyled>
@@ -30,6 +32,7 @@ const Header = () => {
                   text={text}
                   noArrow
                   $noUnderline={i === 0}
+                  aria-current="page"
                 />
               </LiStyled>
             ))}
@@ -39,6 +42,7 @@ const Header = () => {
           </UlStyled>
         </CenterWrapperStyled>
       </ContainerStyled>
+
       {isBrowser &&
         createPortal(
           <AnimatePresence exitBeforeEnter>
@@ -73,7 +77,7 @@ const listItems = [
     text: 'about'
   },
   {
-    link: '#contact',
+    link: '/#contact',
     text: 'contact'
   }
 ];

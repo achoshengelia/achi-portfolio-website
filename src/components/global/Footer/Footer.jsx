@@ -22,6 +22,7 @@ const Footer = () => {
                 text={name}
                 target="_blank"
                 rel="noreferrer"
+                isExternalLink
                 noArrow
               />
             ))}
@@ -29,6 +30,7 @@ const Footer = () => {
           <AnimatedLink
             href="mailto: achoshengelia@gmail.com"
             text="achoshengelia@gmail.com"
+            isExternalLink
             noArrow
           />
         </ExternalsWrapperStyled>

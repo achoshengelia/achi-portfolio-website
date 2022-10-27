@@ -44,9 +44,9 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-styled-components`
+    `gatsby-transformer-json`
   ]
 };

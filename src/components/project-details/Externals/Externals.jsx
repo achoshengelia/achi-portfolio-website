@@ -16,6 +16,7 @@ const Externals = ({ externals }) => {
             text="View website"
             target="_blank"
             rel="noreferrer"
+            isExternalLink
           />
         ) : null}
         {repository ? (
@@ -24,6 +25,7 @@ const Externals = ({ externals }) => {
             text="View repository"
             target="_blank"
             rel="noreferrer"
+            isExternalLink
           />
         ) : null}
         <AnimatedLink
