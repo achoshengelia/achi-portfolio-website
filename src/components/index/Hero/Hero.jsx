@@ -27,7 +27,7 @@ const Hero = () => {
           }}
         >
           <AnimatedHeading />
-          <ParagraphStyled>Frontend Developer</ParagraphStyled>
+          <ParagraphStyled>Web Developer</ParagraphStyled>
         </HeaderStyled>
         <BallWrapperStyled>
           <BouncingBallStyled />

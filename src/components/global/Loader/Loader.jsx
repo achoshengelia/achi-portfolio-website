@@ -10,7 +10,7 @@ const Loader = () => {
   const sequence = useCallback(async () => {
     await controls.start('initial');
     await controls.start('animate');
-    return await controls.start('exit');
+    await controls.start('exit');
   }, [controls]);
 
   useEffect(() => {

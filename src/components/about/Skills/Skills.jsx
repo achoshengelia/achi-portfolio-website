@@ -33,11 +33,12 @@ const Skills = () => {
 export default Skills;
 
 const skills = [
-  'JavaScript',
   'TypeScript',
-  'React.js',
-  'Next.js',
-  'Gatsby.js',
+  'React',
+  'Next',
+  'Vue',
+  'Nuxt',
+  'Nest',
   'HTML',
   'CSS',
   'GIT'

@@ -49,9 +49,17 @@ export default Experience;
 
 const experiences = [
   {
+    company: 'Get it Done Technologies GmbH',
+    link: 'https://www.getitdone.rocks/',
+    role: 'Full-Stack Developer / 2023 - present',
+    description:
+      "I work as a full-stack developer responsible for implementing new features and maintaining internal web applications. I collaborate with a team on projects involving a range of functionalities, such as enhancing the admin panel, refactoring existing code, and creating responsive sub-pages. My work contributes to the continuous improvement of our applications, ensuring they meet our company's evolving needs.",
+    isExternalLink: true
+  },
+  {
     company: 'AltexSoft',
     link: 'https://www.altexsoft.com/',
-    role: 'Frontend Developer / 2022 - Present',
+    role: 'Frontend Developer / 2022 - 2023',
     description:
       'I worked on a project with a team of 15 people. We were building a new platform for a travel agency that would have a search engine, integrated booking system, admin panel and authentication. My tasks varied from refactoring existing code, implementing various functionalities in admin panel and other pages, to building fully responsive sub-pages from scratch.',
     isExternalLink: true
