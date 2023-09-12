@@ -5,7 +5,8 @@ import React, {
   useMemo,
   useCallback
 } from 'react';
-import { isHomePage } from 'utils';
+import { navigate } from 'gatsby';
+import { isBrowser, isHomePage, scrollTo } from 'utils';
 
 export const GlobalContext = createContext({
   overflowHidden: null,
@@ -27,6 +28,50 @@ export const GlobalContextProvider = ({ children }) => {
     setShowMenu(prevState => !prevState);
     setOverflowHidden(!showMenu);
   }, [showMenu]);
+  const handleNavigate = useCallback(
+    ({ isScrollTop, pathname, url }) =>
+      e => {
+        e.preventDefault();
+
+        if (transitionPage) return;
+
+        //* scroll top
+        if (
+          (isBrowser && isScrollTop) ||
+          url === '#' ||
+          (pathname === '/' && url === '/')
+        ) {
+          return window.scrollTo(0, 0);
+        }
+
+        //* scroll to id from main page
+        if (pathname === '/' && url.includes('#')) {
+          const id = url.split('#')[1];
+
+          return scrollTo(id);
+        }
+
+        setTransitionPage(true);
+        setTimeout(() => {
+          setTransitionPage(false);
+
+          if (url.includes('#')) {
+            const id = url.split('#')[1];
+            navigate(`/${url}`);
+
+            return setTimeout(() => {
+              scrollTo(id);
+            }, 1500);
+          }
+          navigate(url);
+
+          setTimeout(() => {
+            window.scrollTo(0, 0);
+          }, 100);
+        }, 2500);
+      },
+    [transitionPage, setTransitionPage]
+  );
 
   const contextValue = useMemo(() => {
     return {
@@ -36,7 +81,8 @@ export const GlobalContextProvider = ({ children }) => {
       transitionPage,
       setOverflowHidden,
       handleToggleMenu,
-      setTransitionPage
+      setTransitionPage,
+      handleNavigate
     };
   }, [
     overflowHidden,
@@ -45,7 +91,8 @@ export const GlobalContextProvider = ({ children }) => {
     transitionPage,
     setOverflowHidden,
     handleToggleMenu,
-    setTransitionPage
+    setTransitionPage,
+    handleNavigate
   ]);
 
   useEffect(() => {

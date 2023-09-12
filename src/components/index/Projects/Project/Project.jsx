@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { GlobalContext } from 'providers';
 import { Technologies } from 'components';
-import { handleNavigate, isMobileDevice, slugify } from 'utils';
+import { isMobileDevice, slugify } from 'utils';
 import {
   ContainerStyled,
   FigureCaptionStyled,
@@ -17,7 +17,7 @@ import {
 const Project = ({ data }) => {
   const { title, image, technologies } = data;
   const [isVisible, setIsVisible] = useState(false);
-  const { transitionPage, setTransitionPage } = useContext(GlobalContext);
+  const { handleNavigate } = useContext(GlobalContext);
 
   return (
     <ContainerStyled
@@ -34,9 +34,7 @@ const Project = ({ data }) => {
 
         <Link
           onClick={handleNavigate({
-            url: `projects/${slugify(title)}`,
-            transitionPage,
-            setTransitionPage
+            url: `projects/${slugify(title)}`
           })}
           to={`projects/${slugify(title)}`}
         >

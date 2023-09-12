@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
 import { GlobalContext } from 'providers';
-import { handleNavigate } from 'utils';
+// import { handleNavigate } from 'utils';
 import {
   LinkStyled,
   ArrowWrapperStyled,
@@ -19,22 +19,20 @@ const AnimatedLink = ({
   ...props
 }) => {
   const url = href || to;
-  const { transitionPage, setTransitionPage } = useContext(GlobalContext);
+  const { handleNavigate } = useContext(GlobalContext);
   const { pathname } = useLocation();
 
   return (
     <LinkStyled
-      as={!isExternalLink ? Link : null}
-      href={isExternalLink ? url : null}
-      to={!isExternalLink ? url : null}
+      as={!isExternalLink ? Link : undefined}
+      href={isExternalLink ? url : undefined}
+      to={!isExternalLink ? url : undefined}
       onClick={
         !isExternalLink
           ? handleNavigate({
               isScrollTop,
               pathname,
-              url,
-              transitionPage,
-              setTransitionPage
+              url
             })
           : null
       }

@@ -77,7 +77,7 @@ const listItems = [
     text: 'about'
   },
   {
-    link: '/#contact',
+    link: '#contact',
     text: 'contact'
   }
 ];
