@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
-import Pescante from 'assets/fonts/Pescante.woff2';
-import Paysage from 'assets/fonts/Paysage-Regular.woff2';
 
 const GlobalStyles = createGlobalStyle`
    @font-face {
       font-family: Pescante;
-      src: url(${Pescante});
+      src: url('/fonts/Pescante.woff2');
+      font-display: swap;
    }
 
    @font-face {
       font-family: Paysage;
-      src: url(${Paysage});
+      src: url('/fonts/Paysage.woff2');
+      font-display: swap;
    }
 
   *,
@@ -26,20 +26,16 @@ const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.colors.text.light};
   }
 
-  html,
-  body,
-  #gatsby-focus-wrapper {
-    min-height: 100vh;
-    overflow: ${({ overflowHidden }) => (overflowHidden ? 'hidden' : null)};
-    touch-action: ${({ overflowHidden }) => (overflowHidden ? 'none' : null)};
-    -ms-touch-action: ${({ overflowHidden }) =>
-      overflowHidden ? 'none' : null};
-
-  }
 
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   body {
@@ -87,3 +83,16 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default GlobalStyles;
+
+export const DynamicGlobalStyles = createGlobalStyle`
+  html,
+  body,
+  #gatsby-focus-wrapper {
+    min-height: 100vh;
+    overflow: ${({ overflowHidden }) => (overflowHidden ? 'hidden' : null)};
+    touch-action: ${({ overflowHidden }) => (overflowHidden ? 'none' : null)};
+    -ms-touch-action: ${({ overflowHidden }) =>
+      overflowHidden ? 'none' : null};
+
+  }
+`;
