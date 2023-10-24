@@ -29,17 +29,15 @@ export default Bio;
 const Text = () => {
   return (
     <ParagraphStyled>
-      I am Achi Shengelia — a frontend developer, from Tbilisi, specialising in
-      React. I started my journey to become a web developer at the end of 2020.
-      Since I discovered coding, it has become my new passion and a professional
-      interest. For me, having enthusiasm and joy are crucial factors when
-      choosing a line of work, which is why I decided on this field.
+      Hello! My name is Achi Shengelia and I am a web developer based in Berlin,
+      specialising in frontend development with a growing expertise in backend.
+      With over 3 years of professional experience, I enjoy writing clean,
+      scalable, and modern code. Currently, I am seeking an environment that
+      will allow me to take my skills to the next level.
       <br />
       <br />I try to keep up to date with new technologies and improve my
       knowledge in already established ones, in order to create flawless UIs, as
-      well as to ease the workload for my teammates. At the moment, I have
-      almost 2 years of experience (as a freelancer and working in a company)
-      and I'm looking for new challenges.
+      well as to ease the workload for my teammates.
     </ParagraphStyled>
   );
 };
