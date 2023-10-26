@@ -31,11 +31,11 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
     scroll-behavior: smooth;
 
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
       display: none;
     }
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; */
   }
 
   body {
