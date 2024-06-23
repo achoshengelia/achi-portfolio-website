@@ -4,8 +4,8 @@ import { customMediaQuery } from 'utils';
 
 export const GridWrapperStyled = styled.div`
   display: grid;
-  grid-template-areas: ${({ isSecondLayout }) =>
-    isSecondLayout ? '"a a a" "b c d"' : '"a a a" "b b c" "b b d"'};
+  grid-template-areas: ${({ $isSecondLayout }) =>
+    $isSecondLayout ? '"a a a" "b c d"' : '"a a a" "b b c" "b b d"'};
   gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: max-content;

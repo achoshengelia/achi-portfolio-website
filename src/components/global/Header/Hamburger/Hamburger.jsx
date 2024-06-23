@@ -6,7 +6,7 @@ const Hamburger = () => {
   const { showMenu, handleToggleMenu } = useContext(GlobalContext);
 
   return (
-    <ContainerStyled showMenu={showMenu} onClick={handleToggleMenu}>
+    <ContainerStyled $showMenu={showMenu} onClick={handleToggleMenu}>
       <span></span>
       <span></span>
       <span></span>

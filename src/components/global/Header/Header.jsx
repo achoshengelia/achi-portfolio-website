@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <>
       <ContainerStyled
-        scrollDirection={scrollDirection}
-        animate={animate}
-        isHomePage={location.pathname === '/'}
+        $scrollDirection={scrollDirection}
+        $animate={animate}
+        $isHomePage={location.pathname === '/'}
       >
         <CenterWrapperStyled as="nav">
           <UlStyled>
@@ -45,7 +45,7 @@ const Header = () => {
 
       {isBrowser &&
         createPortal(
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             {showMenu ? (
               <Menu
                 listItems={getMenuListItems(listItems)}

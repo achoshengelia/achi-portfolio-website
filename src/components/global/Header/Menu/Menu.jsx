@@ -36,7 +36,7 @@ const mainVariants = {
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.08,
-      duration: 1,
+      duration: 0.6,
       ease: 'easeInOut'
     }
   },
@@ -45,7 +45,7 @@ const mainVariants = {
     transition: {
       when: 'afterChildren',
       staggerChildren: 0.08,
-      duration: 1,
+      duration: 0.6,
       ease: 'easeInOut'
     }
   }

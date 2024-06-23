@@ -44,15 +44,15 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['Pescante', 'Paysage'],
-          urls: ['/fonts/Pescante.woff2', '/fonts/Paysage.woff2']
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     custom: {
+    //       families: ['Pescante', 'Paysage'],
+    //       urls: ['/fonts/Pescante.woff2', '/fonts/Paysage.woff2']
+    //     }
+    //   }
+    // },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,

@@ -11,7 +11,7 @@ const Gallery = ({ gallery }) => {
     <ContainerStyled>
       <CenterWrapperStyled>
         {chunks.map((chunk, i) => (
-          <GridWrapperStyled key={i} isSecondLayout={i === 1}>
+          <GridWrapperStyled key={i} $isSecondLayout={i === 1}>
             {chunk.map(({ id, src, alt }, i) => (
               <AnimatedImage key={`${id}-${i}`} data={{ src, alt }} />
             ))}

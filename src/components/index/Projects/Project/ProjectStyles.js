@@ -57,7 +57,7 @@ export const LetterWrapperStyled = styled(motion.span)`
   display: inline-block;
 `;
 
-export const WordWrapperStyled = styled.span``;
+export const WordWrapperStyled = styled(motion.span)``;
 
 export const HeadingStyled = styled(motion.h2)`
   position: absolute;
@@ -69,10 +69,10 @@ export const HeadingStyled = styled(motion.h2)`
   font-family: ${props => props.theme.fonts.secondary};
   text-transform: uppercase;
   z-index: 2;
-  transition: opacity 0.5s ease;
+  /* transition: opacity 0.5s ease; */
   margin: 0;
   pointer-events: none;
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
+  /* opacity: ${({ isVisible }) => (isVisible ? '1' : '0')}; */
   text-shadow: 5px 4px 9px rgba(247, 37, 133, 0.1);
   overflow: hidden;
 

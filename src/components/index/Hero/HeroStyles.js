@@ -119,18 +119,18 @@ export const HeaderStyled = styled(motion.div)`
 
 export const ContainerStyled = styled.section`
   height: 100vh;
-  opacity: ${({ animate }) => (animate === null ? '0' : '1')};
+  opacity: ${({ $animate }) => ($animate === null ? '0' : '1')};
 
   & ${SvgStyled} {
     & path {
-      opacity: ${({ animate }) => (!animate ? '1' : '0')};
-      animation: ${({ animate }) => (!animate ? 'none' : null)};
-      stroke-dashoffset: ${({ animate }) => (!animate ? '0' : null)};
+      opacity: ${({ $animate }) => (!$animate ? '1' : '0')};
+      animation: ${({ $animate }) => (!$animate ? 'none' : null)};
+      stroke-dashoffset: ${({ $animate }) => (!$animate ? '0' : null)};
     }
   }
 
   & ${ParagraphStyled}, ${BallWrapperStyled} {
-    opacity: ${({ animate }) => (!animate ? '1' : '0')};
-    animation: ${({ animate }) => (!animate ? 'none' : null)};
+    opacity: ${({ $animate }) => (!$animate ? '1' : '0')};
+    animation: ${({ $animate }) => (!$animate ? 'none' : null)};
   }
 `;

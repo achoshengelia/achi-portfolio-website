@@ -43,16 +43,16 @@ export const isExternalLink = url => {
 
 export const isHomePage = () => isBrowser && window.location.pathname === '/';
 
-export const scrollTo = id => {
+export const scrollTo = (id, behavior) => {
   if (isBrowser) {
     const element = document.getElementById(id);
     const headerOffset = 100;
     const elementPosition = element?.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: 'smooth'
+      behavior: behavior ? behavior : 'smooth'
     });
   }
 };

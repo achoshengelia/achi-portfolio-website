@@ -35,7 +35,9 @@ export const ExperienceStyled = styled(motion.li)`
   }
 `;
 
-export const ExperienceListStyled = styled(motion.ul)`
+export const ExperienceListStyled = styled(
+  motion('ul', { forwardMotionProps: false })
+)`
   flex-basis: 50%;
   margin-left: 8rem;
 

@@ -88,7 +88,8 @@ const variantsParent = {
     y: '-50%',
     x: '-50%',
     transition: {
-      delayChildren: 0.1,
+      duration: 0.01,
+      delayChildren: 0.05,
       staggerChildren: 0.04
     }
   }
@@ -100,7 +101,7 @@ const variantsChild = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.3
+      duration: 0.05
     }
   }
 };

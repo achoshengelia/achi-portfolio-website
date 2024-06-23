@@ -21,23 +21,23 @@ export const ContainerStyled = styled.div`
 
     &:nth-of-type(1) {
       width: 50%;
-      transform-origin: ${({ showMenu }) => (showMenu ? 'bottom' : null)};
-      transform: ${({ showMenu }) =>
-        showMenu ? 'rotatez(45deg) translate(2px, 0px)' : null};
+      transform-origin: ${({ $showMenu }) => ($showMenu ? 'bottom' : null)};
+      transform: ${({ $showMenu }) =>
+        $showMenu ? 'rotatez(45deg) translate(2px, 0px)' : null};
     }
 
     &:nth-of-type(2) {
       width: 78%;
-      transform-origin: ${({ showMenu }) => (showMenu ? 'top' : null)};
-      transform: ${({ showMenu }) =>
-        showMenu ? 'rotatez(-45deg) translate(0.3px, -1.7px)' : null};
+      transform-origin: ${({ $showMenu }) => ($showMenu ? 'top' : null)};
+      transform: ${({ $showMenu }) =>
+        $showMenu ? 'rotatez(-45deg) translate(0.3px, -1.7px)' : null};
     }
 
     &:nth-of-type(3) {
-      width: ${({ showMenu }) => (showMenu ? '50%' : '75%')};
-      transform-origin: ${({ showMenu }) => (showMenu ? 'bottom' : null)};
-      transform: ${({ showMenu }) =>
-        showMenu ? 'translate(8px, -6px) rotatez(45deg)' : null};
+      width: ${({ $showMenu }) => ($showMenu ? '50%' : '75%')};
+      transform-origin: ${({ $showMenu }) => ($showMenu ? 'bottom' : null)};
+      transform: ${({ $showMenu }) =>
+        $showMenu ? 'translate(8px, -6px) rotatez(45deg)' : null};
     }
   }
 

@@ -26,13 +26,13 @@ const Button = ({
   return (
     <ButtonStyled
       type={isError ? 'reset' : 'submit'}
-      isLoading={isLoading}
-      isSuccess={isSuccess}
+      $isLoading={isLoading}
+      $isSuccess={isSuccess}
       disabled={isLoading || isSuccess}
       onClick={isError ? handleClick : handleSubmit}
     >
       <WordWrapperStyled>{children}</WordWrapperStyled>
-      <LoadingWrapperStyled isLoading={isLoading}>
+      <LoadingWrapperStyled $isLoading={isLoading}>
         <CircleStyled>
           <ArrowIcon />
         </CircleStyled>

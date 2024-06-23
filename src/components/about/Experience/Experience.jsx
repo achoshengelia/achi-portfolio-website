@@ -49,11 +49,19 @@ export default Experience;
 
 const experiences = [
   {
+    company: 'E3DC GmbH',
+    link: 'https://www.e3dc.com/',
+    role: 'Frontend Developer / 2024 - Present',
+    description:
+      "I work as a frontend developer, mainly responsible for implementing new features on our 'Portal' application, as well as, maintaining and refactoring existing code.",
+    isExternalLink: true
+  },
+  {
     company: 'Get it Done Technologies GmbH',
     link: 'https://www.getitdone.rocks/',
-    role: 'Full-Stack Developer / 2023 - present',
+    role: 'Full-Stack Developer / 2023 - 2024',
     description:
-      "I work as a full-stack developer responsible for implementing new features and maintaining internal web applications. I collaborate with a team on projects involving a range of functionalities, such as enhancing the admin panel, refactoring existing code, and creating responsive sub-pages. My work contributes to the continuous improvement of our applications, ensuring they meet our company's evolving needs.",
+      "I worked as a full-stack developer responsible for implementing new features and maintaining internal web applications. I had to collaborate with my team on projects involving a range of functionalities, such as enhancing the admin panel, refactoring existing code, and creating responsive sub-pages. My work contributed to the continuous improvement of our applications, ensuring they met our company's evolving needs.",
     isExternalLink: true
   },
   {

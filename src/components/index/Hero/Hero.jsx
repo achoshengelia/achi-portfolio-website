@@ -19,7 +19,7 @@ const Hero = () => {
   const { animate } = useContext(GlobalContext);
 
   return (
-    <ContainerStyled animate={animate}>
+    <ContainerStyled $animate={animate}>
       <CenterWrapperStyled>
         <HeaderStyled
           style={{

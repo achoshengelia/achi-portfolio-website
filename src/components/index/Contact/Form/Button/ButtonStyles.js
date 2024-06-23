@@ -34,8 +34,8 @@ export const ButtonStyled = styled.button`
   border-radius: 2rem;
   font-size: 2.5rem;
   padding: 0.3em 1em;
-  cursor: ${({ isLoading, isSuccess }) =>
-    isLoading ? 'wait' : isSuccess ? 'default' : 'pointer'};
+  cursor: ${({ $isLoading, $isSuccess }) =>
+    $isLoading ? 'wait' : $isSuccess ? 'default' : 'pointer'};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,21 +47,21 @@ export const ButtonStyled = styled.button`
   align-self: flex-end;
   margin-top: 3rem;
   margin-left: auto;
-  width: ${({ isLoading }) => (isLoading ? '0' : '100%')};
+  width: ${({ $isLoading }) => ($isLoading ? '0' : '100%')};
   transition: all 0.5s ease;
 
   & ${LoadingWrapperStyled} {
-    ${({ isLoading }) => (isLoading ? AnimateButton : null)};
+    ${({ $isLoading }) => ($isLoading ? AnimateButton : null)};
   }
 
   & ${WordWrapperStyled} {
-    width: ${({ isLoading }) => (isLoading ? '0' : '100%')};
+    width: ${({ $isLoading }) => ($isLoading ? '0' : '100%')};
     overflow: hidden;
     transition: all 0.5s ease;
   }
 
   & ${CircleStyled} {
-    opacity: ${({ isSuccess }) => (isSuccess ? '.6' : null)};
+    opacity: ${({ $isSuccess }) => ($isSuccess ? '.6' : null)};
   }
 
   &::before {
@@ -79,18 +79,18 @@ export const ButtonStyled = styled.button`
   @media (hover: hover) {
     &:hover {
       &::before {
-        transform: ${({ isLoading, isSuccess }) =>
-          isLoading || isSuccess ? null : 'scaleY(1)'};
+        transform: ${({ $isLoading, $isSuccess }) =>
+          $isLoading || $isSuccess ? null : 'scaleY(1)'};
         transform-origin: bottom;
       }
 
       & ${CircleStyled} {
-        transform: ${({ isLoading, isSuccess }) =>
-          isLoading || isSuccess ? null : 'scale(1.2)'};
+        transform: ${({ $isLoading, $isSuccess }) =>
+          $isLoading || $isSuccess ? null : 'scale(1.2)'};
 
         & > svg {
-          opacity: ${({ isLoading, isSuccess }) =>
-            isLoading || isSuccess ? null : '1'};
+          opacity: ${({ $isLoading, $isSuccess }) =>
+            $isLoading || $isSuccess ? null : '1'};
         }
       }
     }

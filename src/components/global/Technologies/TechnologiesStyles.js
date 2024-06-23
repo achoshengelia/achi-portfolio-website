@@ -10,11 +10,11 @@ export const ContainerStyled = styled.ul`
   font-size: 1.4rem;
 
   & ${ItemStyled} {
-    color: ${({ theme, dark }) =>
-      dark ? theme.colors.text.dark : theme.colors.text.light};
+    color: ${({ theme, $dark }) =>
+      $dark ? theme.colors.text.dark : theme.colors.text.light};
     border: 1px solid
-      ${({ theme, dark }) =>
-        dark ? theme.colors.text.dark : theme.colors.text.light};
+      ${({ theme, $dark }) =>
+        $dark ? theme.colors.text.dark : theme.colors.text.light};
     display: flex;
     justify-content: center;
     align-items: center;

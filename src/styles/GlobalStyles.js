@@ -1,17 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-   @font-face {
-      font-family: Pescante;
-      src: url('/fonts/Pescante.woff2');
-      font-display: swap;
-   }
-
-   @font-face {
-      font-family: Paysage;
-      src: url('/fonts/Paysage.woff2');
-      font-display: swap;
-   }
 
   *,
   *::after,

@@ -32,15 +32,19 @@ export default Loader;
 
 const mainVariants = {
   initial: {
-    opacity: 0
+    opacity: 0,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.1,
+      duration: 0
+    }
   },
   animate: {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
-      duration: 0.01,
-      ease: 'easeInOut'
+      duration: 0
     }
   },
   exit: {
@@ -48,8 +52,7 @@ const mainVariants = {
     transition: {
       when: 'afterChildren',
       staggerChildren: 0.1,
-      duration: 0.01,
-      ease: 'easeInOut'
+      duration: 0
     }
   }
 };
@@ -62,16 +65,18 @@ const childVariants = {
     y: 0,
     transition: {
       type: 'spring',
-      duration: 2.5,
-      ease: [0.16, 1, 0.3, 1]
+      stiffness: 40,
+      duration: 1.5,
+      ease: [0.16, 1, 0.3, 0.5]
     }
   },
   exit: {
     y: '150%',
     transition: {
       type: 'spring',
-      duration: 2.5,
-      ease: [0.16, 1, 0.3, 1]
+      stiffness: 40,
+      duration: 1.5,
+      ease: [0.16, 1, 0.3, 0.5]
     }
   }
 };

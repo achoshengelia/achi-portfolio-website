@@ -48,7 +48,7 @@ const mainVariants = {
   animate: {
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
       ease: 'easeInOut',
       delayChildren: 0.3
     }
@@ -65,7 +65,7 @@ const childVariants = {
     opacity: 1,
     transition: {
       type: 'spring',
-      duration: 0.5,
+      duration: 0.2,
       ease: [0.16, 1, 0.3, 1]
     }
   }

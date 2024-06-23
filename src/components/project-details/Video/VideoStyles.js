@@ -20,7 +20,7 @@ export const ButtonStyled = styled.button`
 
   & ${SvgWrapperStyled} {
     display: block;
-    transform: ${({ isPlaying }) => (isPlaying ? 'scale(0)' : 'scale(1)')};
+    transform: ${({ $isPlaying }) => ($isPlaying ? 'scale(0)' : 'scale(1)')};
     transition: transform 0.1s ease-in-out;
     position: relative;
 
@@ -42,7 +42,7 @@ export const CursorWrapperStyled = styled.i`
   z-index: 99000;
   pointer-events: none;
   color: red;
-  transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(0)')};
+  transform: ${({ $isVisible }) => ($isVisible ? 'scale(1)' : 'scale(0)')};
   transition: transform 0.1s ease-in-out;
   box-shadow: ${({ isPointer }) =>
     isPointer ? '0 0 30px rgba(255, 255, 0, 0.5)' : null};
@@ -53,10 +53,10 @@ export const VideoStyled = styled.video`
   width: 100%;
   height: 100%;
   max-height: 90vh;
-  opacity: ${({ isPlaying }) => (isPlaying ? '1' : '.3')};
+  opacity: ${({ $isPlaying }) => ($isPlaying ? '1' : '.3')};
   transition: opacity 0.7s ease;
-  cursor: ${({ isPlaying }) =>
-    isPlaying ? `url(${pause}) 6 8, auto` : `url(${play}) 6 8, auto`};
+  cursor: ${({ $isPlaying }) =>
+    $isPlaying ? `url(${pause}) 6 8, auto` : `url(${play}) 6 8, auto`};
 `;
 
 export const VideoWrapperStyled = styled.div`

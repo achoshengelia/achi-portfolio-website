@@ -31,14 +31,14 @@ const Video = ({ video }) => {
           data-cursor
           ref={videoRef}
           onClick={togglePlay}
-          isPlaying={isPlaying}
+          $isPlaying={isPlaying}
           loop
           playsInline
         >
           <source src={video.publicURL} />
         </VideoStyled>
         {isMobileDevice() ? (
-          <PlayButton isPlaying={isPlaying} togglePlay={togglePlay} />
+          <PlayButton $isPlaying={isPlaying} togglePlay={togglePlay} />
         ) : (
           <Cursor isPlaying={isPlaying} />
         )}
@@ -78,7 +78,7 @@ const Cursor = ({ isPlaying }) => {
   }, [cursorRef]);
 
   return (
-    <CursorWrapperStyled ref={cursorRef} isVisible={isVisible && !isPlaying}>
+    <CursorWrapperStyled ref={cursorRef} $isVisible={isVisible && !isPlaying}>
       <CircularTextStyled>
         <svg
           width={256}

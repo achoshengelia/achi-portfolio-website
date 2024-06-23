@@ -15,7 +15,7 @@ const Cover = ({ cover }) => {
   });
 
   return (
-    <ContainerStyled ref={ref} bgColor={bgColor}>
+    <ContainerStyled ref={ref} $bgColor={bgColor}>
       <FixedWrapperStyled
         style={{
           translateY

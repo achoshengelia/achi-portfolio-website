@@ -60,15 +60,15 @@ export const GlobalContextProvider = ({ children }) => {
             navigate(`/${url}`);
 
             return setTimeout(() => {
-              scrollTo(id);
-            }, 1500);
+              scrollTo(id, 'instant');
+            }, 300);
           }
-          navigate(url);
+          navigate(url, 'instant');
 
           setTimeout(() => {
             window.scrollTo(0, 0);
           }, 100);
-        }, 2500);
+        }, 1800);
       },
     [transitionPage, setTransitionPage]
   );

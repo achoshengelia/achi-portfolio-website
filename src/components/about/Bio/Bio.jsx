@@ -29,7 +29,7 @@ export default Bio;
 const Text = () => {
   return (
     <ParagraphStyled>
-      Hello! My name is Achi Shengelia and I am a web developer based in Berlin,
+      Hello! My name is Achi Shengelia, I am a web developer based in Berlin,
       specialising in frontend development with a growing expertise in backend.
       With over 3 years of professional experience, I enjoy writing clean,
       scalable, and modern code. Currently, I am seeking an environment that
