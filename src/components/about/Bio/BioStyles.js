@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { CenterWrapperStyled } from 'styles/utils';
 import { customMediaQuery } from 'utils';
@@ -21,7 +22,7 @@ export const ImagesWrapperStyled = styled.div`
   }
 `;
 
-export const ContentWrapperStyled = styled.div`
+export const ContentWrapperStyled = styled(motion.div)`
   display: flex;
   justify-content: center;
 `;

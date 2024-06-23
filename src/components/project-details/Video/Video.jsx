@@ -38,7 +38,7 @@ const Video = ({ video }) => {
           <source src={video.publicURL} />
         </VideoStyled>
         {isMobileDevice() ? (
-          <PlayButton $isPlaying={isPlaying} togglePlay={togglePlay} />
+          <PlayButton isPlaying={isPlaying} togglePlay={togglePlay} />
         ) : (
           <Cursor isPlaying={isPlaying} />
         )}
@@ -98,7 +98,7 @@ const Cursor = ({ isPlaying }) => {
 
 const PlayButton = ({ isPlaying, togglePlay }) => {
   return (
-    <ButtonStyled isPlaying={isPlaying} onClick={togglePlay}>
+    <ButtonStyled $isPlaying={isPlaying} onClick={togglePlay}>
       <SvgWrapperStyled>
         <CircularTextStyled>
           <svg
